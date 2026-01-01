@@ -255,4 +255,38 @@
 
 		}
 
+	// WeChat QR modal.
+		var $wechatModal = $('#wechat-qr-modal');
+
+		if ($wechatModal.length > 0) {
+
+			var $wechatTriggers = $('.js-wechat-qr');
+
+			var openWechatModal = function() {
+				$wechatModal.addClass('is-active').attr('aria-hidden', 'false');
+				$body.addClass('is-wechat-qr-visible');
+			};
+
+			var closeWechatModal = function() {
+				$wechatModal.removeClass('is-active').attr('aria-hidden', 'true');
+				$body.removeClass('is-wechat-qr-visible');
+			};
+
+			$wechatTriggers.on('click', function(event) {
+				event.preventDefault();
+				openWechatModal();
+			});
+
+			$wechatModal.on('click', '.wechat-qr-backdrop, .wechat-qr-close', function(event) {
+				event.preventDefault();
+				closeWechatModal();
+			});
+
+			$window.on('keydown', function(event) {
+				if (event.key === 'Escape')
+					closeWechatModal();
+			});
+
+		}
+
 })(jQuery);
