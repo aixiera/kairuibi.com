@@ -283,10 +283,9 @@
 			});
 
 			$window.on('keydown', function(event) {
-				if (event.key === 'Escape')
+				if (event.key === 'Escape'|| event.key === 'Enter' || event.key === ' ')
 					closeWechatModal();
 			});
-
 		}
 
 })(jQuery);
