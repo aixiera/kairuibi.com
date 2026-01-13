@@ -1,0 +1,9 @@
+.variable-proximity-target {
+  position: relative;
+}
+
+.variable-proximity-letter {
+  display: inline-block;
+  font-variation-settings: var(--variable-proximity-from, "wght" 400, "opsz" 9);
+  will-change: font-variation-settings;
+}
