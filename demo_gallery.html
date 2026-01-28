@@ -11,6 +11,102 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.demo-gallery {
+				background: #1b1b1b;
+				color: #f5f5f5;
+				padding: 0;
+			}
+
+			.demo-hero {
+				background: #f5e400;
+				color: #111;
+				text-align: center;
+				padding: 1.5rem 1rem;
+				border-radius: 6px;
+				margin-bottom: 2rem;
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+			}
+
+			.demo-hero h1 {
+				margin: 0 0 0.5rem;
+				font-size: 2rem;
+				font-weight: 700;
+			}
+
+			.demo-card {
+				background: #2a2a2a;
+				padding: 2rem;
+				border-radius: 10px;
+				margin-bottom: 2rem;
+				box-shadow: 0 14px 25px rgba(0, 0, 0, 0.35);
+			}
+
+			.demo-card h2 {
+				color: #f5e400;
+				font-size: 1.8rem;
+				margin-bottom: 0.75rem;
+				text-align: center;
+			}
+
+			.demo-card p {
+				text-align: center;
+				margin-bottom: 1.5rem;
+				color: #e0e0e0;
+				font-weight: 600;
+			}
+
+			.demo-video {
+				background: #0f0f0f;
+				border: 4px solid #3b3b3b;
+				border-radius: 8px;
+				overflow: hidden;
+				aspect-ratio: 16 / 9;
+				position: relative;
+			}
+
+			.demo-video-cover {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				text-decoration: none;
+				color: #f5e400;
+				font-weight: 700;
+				background: #111;
+				position: relative;
+				padding: 1rem;
+			}
+
+			.demo-video-cover span {
+				display: inline-block;
+				background: rgba(0, 0, 0, 0.65);
+				padding: 0.5rem 0.75rem;
+				border-radius: 999px;
+				border: 2px solid #f5e400;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+			}
+
+			.demo-video-cover::after {
+				content: "▶";
+				position: absolute;
+				bottom: 12px;
+				right: 12px;
+				width: 42px;
+				height: 42px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				background: rgba(245, 228, 0, 0.9);
+				color: #111;
+				font-size: 1rem;
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -42,22 +138,25 @@
 
 				<!-- Main -->
 					<div id="main">
+						<section class="post demo-gallery">
+							<div class="demo-hero">
+								<h1>Demo Gallery</h1>
+								<p>See how our automation builds smart, reliable AI workflows.</p>
+							</div>
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-							</section>
-
+							<section class="demo-card">
+								<h2>n8n AI Agent: Update Appointment Data in Google Sheets</h2>
+									<p>
+										This tutorial walks through building an n8n AI agent that listens for appointment updates and
+										automatically writes those changes into a Google Sheet for real-time tracking and reporting.
+									</p>
+									<div class="demo-video">
+										<a class="demo-video-cover" href="https://youtu.be/w5LTH19uHcw" target="_blank" rel="noopener noreferrer">
+											<span><img src="images/(n8n tutorial) less2MB appointment record automation cover.jpg" height="400px" width="650px" alt=""/></span>
+										</a>
+									</div>
+								</section>
+						</section>
 					</div>
 
 				<!-- Footer -->
