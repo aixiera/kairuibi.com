@@ -26,14 +26,51 @@
           secondary-label="Contact"
           secondary-href="/contact.html"
         >
+          <div class="hero-proof">
+            <span class="signal-chip">Refine</span>
+            <span class="signal-chip">Structure</span>
+            <span class="signal-chip is-soft">Reuse</span>
+          </div>
+
           <div class="hero-stack">
-            <div class="mini-card">
-              <span class="card-label">What it does</span>
-              <p>It takes rough or messy prompts and helps shape them into something more specific and usable.</p>
+            <div class="app-preview">
+              <div class="preview-toolbar">
+                <div class="window-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="preview-title">Product preview</span>
+                <span class="pill">Prompt flow</span>
+              </div>
+              <div class="prompt-grid">
+                <div class="prompt-panel">
+                  <span class="prompt-kicker">Draft input</span>
+                  <p>help me write a better prompt for collecting user feedback on a landing page</p>
+                </div>
+                <div class="prompt-panel is-accent">
+                  <span class="prompt-kicker">Refined output</span>
+                  <p>Write a feedback prompt for landing-page users. Ask what felt clear, what caused hesitation, and what they would improve first.</p>
+                </div>
+              </div>
+              <div class="token-row">
+                <span class="token">Clearer scope</span>
+                <span class="token">Better structure</span>
+                <span class="token is-soft">Ready to reuse</span>
+              </div>
             </div>
-            <div class="mini-card">
-              <span class="card-label">What it avoids</span>
-              <p>It stays focused on prompt clarity rather than turning the product into a general-purpose marketing page.</p>
+
+            <div class="stat-grid">
+              <div class="stat-card">
+                <span class="card-label">Main job</span>
+                <strong>Prompt refinement</strong>
+                <p>Designed for people who already have the rough idea and want a stronger version of it.</p>
+              </div>
+              <div class="stat-card">
+                <span class="card-label">Product tone</span>
+                <strong>Calm and direct</strong>
+                <p>Useful enough to feel like a tool, not a showcase page.</p>
+              </div>
             </div>
           </div>
         </hero-section>
@@ -43,20 +80,21 @@
           heading="A practical product for prompt refinement."
           intro="The main job is simple: help users improve prompts without adding unnecessary friction."
         >
-          <div class="surface-grid two-up">
-            <div class="surface-card">
-              <h3>Core idea</h3>
-              <p class="surface-copy">
-                GenPromptly helps users improve vague or messy prompts by making them more specific, structured, and easier to use. It is designed for people who already have a rough idea and want a cleaner starting point.
-              </p>
+          <div class="feature-tiles three-up">
+            <div class="feature-tile">
+              <span class="icon-badge">01</span>
+              <h3>Start rough</h3>
+              <p>GenPromptly works from rough drafts, short ideas, or prompts that feel too loose to use as-is.</p>
             </div>
-            <div class="surface-card">
-              <h3>Where it helps</h3>
-              <ul class="feature-list">
-                <li>Turning short drafts into stronger prompt instructions.</li>
-                <li>Adding structure that makes outputs easier to compare.</li>
-                <li>Making prompts easier to reuse across repeated tasks.</li>
-              </ul>
+            <div class="feature-tile">
+              <span class="icon-badge">02</span>
+              <h3>Add structure</h3>
+              <p>It helps clarify the objective, constraints, and tone so the prompt becomes easier to review.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="icon-badge">03</span>
+              <h3>Keep it reusable</h3>
+              <p>The end result is meant to be reused, adapted, or refined again instead of discarded.</p>
             </div>
           </div>
         </section-shell>
@@ -64,18 +102,32 @@
         <section-shell
           eyebrow="Before and after"
           heading="A simple example."
-          intro="The product is meant to make the prompt clearer, not louder."
+          intro="The goal is to make the prompt clearer, not louder."
         >
-          <div class="example-grid">
-            <div class="example-block">
-              <span class="example-label">Before</span>
-              <p>help me write a prompt for product feedback and make it organized</p>
+          <div class="section-grid two-up">
+            <div class="comparison-surface">
+              <div class="panel-toolbar">
+                <span class="preview-title">Prompt comparison</span>
+                <span class="pill">Input to output</span>
+              </div>
+              <div class="example-grid">
+                <div class="example-block">
+                  <span class="example-label">Before</span>
+                  <p>help me write a prompt for product feedback and make it organized</p>
+                </div>
+                <div class="example-block">
+                  <span class="example-label">After</span>
+                  <p>Write a prompt that asks users for product feedback in three parts: what worked, what felt unclear, and what they would improve first.</p>
+                </div>
+              </div>
             </div>
-            <div class="example-block">
-              <span class="example-label">After</span>
-              <p>
-                Write a prompt that asks users for product feedback in three parts: what worked, what felt unclear, and what they would improve first. Keep the tone neutral and ask for short, concrete examples.
-              </p>
+            <div class="surface-card">
+              <h3>What changes</h3>
+              <ul class="feature-list">
+                <li>The request becomes more specific.</li>
+                <li>The structure becomes easier to review.</li>
+                <li>The prompt becomes easier to reuse for the next run.</li>
+              </ul>
             </div>
           </div>
         </section-shell>
@@ -83,27 +135,24 @@
         <section-shell
           eyebrow="How it works"
           heading="A compact, product-focused flow."
-          intro="The intent is to keep the experience easy to scan and easy to return to."
+          intro="Three steps are usually enough to make the experience easy to scan and understand."
         >
-          <div class="project-grid">
-            <project-card
-              eyebrow="Step 1"
-              heading="Start rough"
-              description="Begin with the prompt as it exists now, even if it is short, unclear, or unstructured."
-              status="Input"
-            ></project-card>
-            <project-card
-              eyebrow="Step 2"
-              heading="Add structure"
-              description="Clarify the objective, constraints, and tone so the prompt becomes easier to use."
-              status="Refine"
-            ></project-card>
-            <project-card
-              eyebrow="Step 3"
-              heading="Review and reuse"
-              description="Use the revised prompt directly or keep iterating until it matches the workflow."
-              status="Output"
-            ></project-card>
+          <div class="workflow-band">
+            <div class="workflow-step">
+              <span class="step-no">01</span>
+              <h3>Start with the draft</h3>
+              <p>Use the prompt as it currently exists, even if it is short, unclear, or unstructured.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="step-no">02</span>
+              <h3>Refine the structure</h3>
+              <p>Clarify the objective, boundaries, and tone so the prompt becomes easier to use well.</p>
+            </div>
+            <div class="workflow-step">
+              <span class="step-no">03</span>
+              <h3>Review and reuse</h3>
+              <p>Take the revised prompt directly into your workflow or keep iterating until it feels right.</p>
+            </div>
           </div>
         </section-shell>
 
@@ -120,16 +169,26 @@
               </p>
               <div data-product-actions="full"></div>
             </div>
+
             <div class="surface-card">
-              <h3>Integration note</h3>
-              <p class="surface-copy">
-                This structure is ready for a straightforward rollout:
-              </p>
-              <ul class="feature-list">
-                <li>Stripe Payment Link for the initial subscription button.</li>
-                <li>A dedicated billing route or Stripe Customer Portal for billing management.</li>
-                <li>The same page markup can later point to a custom Checkout session endpoint.</li>
-              </ul>
+              <div class="panel-toolbar">
+                <span class="preview-title">Billing architecture</span>
+                <span class="pill">Payment links first</span>
+              </div>
+              <div class="flow-map">
+                <div class="flow-node">
+                  <strong>Stripe Payment Link</strong>
+                  <p>Use this first for the subscribe CTA.</p>
+                </div>
+                <div class="flow-node">
+                  <strong>Billing route or portal</strong>
+                  <p>Point manage-billing to a Customer Portal or internal billing page when ready.</p>
+                </div>
+                <div class="flow-node">
+                  <strong>Checkout later</strong>
+                  <p>The same CTA area can later be switched to a Checkout session flow without redesigning the page.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section-shell>

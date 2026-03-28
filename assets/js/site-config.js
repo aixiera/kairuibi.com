@@ -22,7 +22,7 @@ export const siteConfig = {
     manageBillingUrl: "",
     paymentMode: "payment-links-first",
     tryPlaceholder:
-      "Add the live GenPromptly app URL in assets/js/site-config.js.",
+      "https://genpromptly.app/",
     subscribePlaceholder:
       "Add your Stripe Payment Link in assets/js/site-config.js.",
     billingPlaceholder:

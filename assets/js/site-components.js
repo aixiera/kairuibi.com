@@ -318,6 +318,14 @@ function applySiteTokens() {
     element.textContent = siteConfig.contactEmail;
   });
 
+  document.querySelectorAll("[data-contact-button]").forEach((element) => {
+    if (!(element instanceof HTMLAnchorElement)) {
+      return;
+    }
+
+    element.href = `mailto:${siteConfig.contactEmail}`;
+  });
+
   document.querySelectorAll("[data-location]").forEach((element) => {
     element.textContent = siteConfig.location;
   });

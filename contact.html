@@ -26,9 +26,22 @@
           secondary-label="Home"
           secondary-href="/index.html"
         >
-          <div class="mini-card">
-            <span class="card-label">Best use</span>
-            <p>Email is the simplest path for general questions and billing support.</p>
+          <div class="hero-proof">
+            <span class="signal-chip">Product questions</span>
+            <span class="signal-chip">Billing support</span>
+            <span class="signal-chip is-soft">Direct email</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="card-label">Best path</span>
+              <strong>Email first</strong>
+              <p>The simplest route for general questions and subscription support.</p>
+            </div>
+            <div class="stat-card">
+              <span class="card-label">Tone</span>
+              <strong>Direct and low-friction</strong>
+              <p>No forms or extra steps are needed for a basic question.</p>
+            </div>
           </div>
         </hero-section>
 
@@ -38,7 +51,11 @@
           intro="Short, direct, and easy to find."
         >
           <div class="contact-grid" id="contact-details">
-            <div class="surface-card">
+            <div class="contact-panel">
+              <div class="panel-toolbar">
+                <span class="preview-title">Primary contact</span>
+                <span class="pill">Email</span>
+              </div>
               <div class="contact-list">
                 <div class="contact-item">
                   <strong>Email</strong>
@@ -49,10 +66,17 @@
                   <span data-location></span>
                 </div>
               </div>
+              <div class="contact-actions">
+                <a class="btn btn-primary" data-contact-button href="#">Email Kairui</a>
+                <a class="btn" href="/genpromptly.html">View GenPromptly</a>
+              </div>
             </div>
             <div class="surface-card" data-hide-if-empty>
-              <h3>Social links</h3>
-              <p class="surface-copy">Optional social links can be enabled from the shared site config when they are ready.</p>
+              <div class="panel-toolbar">
+                <span class="preview-title">Social</span>
+                <span class="pill">Optional</span>
+              </div>
+              <p class="surface-copy">Social links can be enabled from the shared site config when real profiles are ready to add.</p>
               <div class="social-links" data-social-links></div>
             </div>
           </div>
@@ -60,13 +84,22 @@
 
         <section-shell
           eyebrow="Support"
-          heading="GenPromptly questions and billing"
+          heading="Common reasons to reach out"
           intro="The same contact address can be used for product questions, Stripe-related issues, or general support."
         >
-          <div class="surface-card">
-            <p class="surface-copy">
-              If you are trying to access GenPromptly, need help with billing, or want to ask a product question, email <a data-contact-link href="#"></a>.
-            </p>
+          <div class="support-topics three-up">
+            <div class="topic-item">
+              <h3>Product fit</h3>
+              <p>Questions about what GenPromptly is designed to do and where it is most useful.</p>
+            </div>
+            <div class="topic-item">
+              <h3>Billing</h3>
+              <p>Questions about subscriptions, Stripe links, or future billing management.</p>
+            </div>
+            <div class="topic-item">
+              <h3>General contact</h3>
+              <p>A direct conversation about current work, projects, or next steps.</p>
+            </div>
           </div>
         </section-shell>
       </div>
