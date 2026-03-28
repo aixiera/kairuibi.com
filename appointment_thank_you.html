@@ -2,58 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/contact.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Booking Confirmation | OpsForLocal</title>
-    <meta name="description" content="Booking confirmation page for OpsForLocal calls." />
-    <link rel="shortcut icon" type="image/png" href="images/OpsForLocal_logo.png" />
+    <title>Page moved | Kairui Bi</title>
+    <meta name="description" content="This page has moved to the Contact page." />
     <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="module" src="/assets/js/site-components.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="/index.html">OpsForLocal</a>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a class="nav-link" href="/index.html">Home</a>
-          <a class="nav-link" href="/services.html">Services</a>
-          <a class="nav-link" href="/use-cases.html">Use Cases</a>
-          <a class="nav-link" href="/About.html">About</a>
-          <a class="btn btn-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CeNNC3GzpD33tTMyYRw_LAGK5Lvc_WFGBK7fO8aqDFZvpboS6-yCJK3KkmPtZEr_Gzm-5OunI?gv=true" target="_blank" rel="noopener noreferrer">Book a Call</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
+    <site-navbar current="contact"></site-navbar>
+    <main class="page-main">
       <div class="container">
-        <section class="page-card page-hero">
-          <h1>Booking received</h1>
-          <p>Thank you for scheduling a call with OpsForLocal.</p>
-        </section>
-
-        <section class="section">
-          <p class="section-intro">If you need to make changes, use the confirmation email from your calendar booking system.</p>
-          <div class="actions">
-            <a class="btn btn-secondary" href="/index.html">Back to Home</a>
-            <a class="btn btn-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CeNNC3GzpD33tTMyYRw_LAGK5Lvc_WFGBK7fO8aqDFZvpboS6-yCJK3KkmPtZEr_Gzm-5OunI?gv=true" target="_blank" rel="noopener noreferrer">Book Another Call</a>
-          </div>
+        <section class="redirect-card">
+          <span class="eyebrow">Redirect</span>
+          <h1>This page now points to contact details.</h1>
+          <p>You can continue to <a class="back-link" href="/contact.html">Contact</a>.</p>
         </section>
       </div>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p class="footer-brand">OpsForLocal</p>
-        <p class="footer-meta">Operated by Kairui Bi in British Columbia, Canada</p>
-        <p class="footer-meta">Contact: <a href="mailto:opsforlocal@gmail.com">opsforlocal@gmail.com</a></p>
-        <nav class="footer-links" aria-label="Legal links">
-          <a href="/legal/privacy.html">Privacy Policy</a>
-          <a href="/legal/terms.html">Terms of Service</a>
-          <a href="/legal/refund.html">Refund / Cancellation Policy</a>
-        </nav>
-        <p class="footer-compliance">
-          <span>By subscribing, you agree to our Terms of Service, Privacy Policy, and Refund / Cancellation Policy.</span>
-          <span>Subscriptions renew automatically until canceled. All fees are non-refundable except where required by applicable law.</span>
-        </p>
-      </div>
-    </footer>
+    <site-footer></site-footer>
   </body>
 </html>

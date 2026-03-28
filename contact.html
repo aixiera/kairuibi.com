@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Kairui Bi</title>
+    <meta
+      name="description"
+      content="Contact Kairui Bi for product questions, GenPromptly support, or direct inquiries."
+    />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="module" src="/assets/js/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar current="contact"></site-navbar>
+
+    <main class="page-main">
+      <div class="container page-stack">
+        <hero-section
+          eyebrow="Contact"
+          title="Get in touch"
+          subtitle="A direct way to reach Kairui Bi."
+          description="For product questions, GenPromptly support, subscription issues, or a straightforward conversation about what I am building."
+          primary-label="View GenPromptly"
+          primary-href="/genpromptly.html"
+          secondary-label="Home"
+          secondary-href="/index.html"
+        >
+          <div class="mini-card">
+            <span class="card-label">Best use</span>
+            <p>Email is the simplest path for general questions and billing support.</p>
+          </div>
+        </hero-section>
+
+        <section-shell
+          eyebrow="Details"
+          heading="Contact information"
+          intro="Short, direct, and easy to find."
+        >
+          <div class="contact-grid" id="contact-details">
+            <div class="surface-card">
+              <div class="contact-list">
+                <div class="contact-item">
+                  <strong>Email</strong>
+                  <a data-contact-link href="#"></a>
+                </div>
+                <div class="contact-item">
+                  <strong>Location</strong>
+                  <span data-location></span>
+                </div>
+              </div>
+            </div>
+            <div class="surface-card" data-hide-if-empty>
+              <h3>Social links</h3>
+              <p class="surface-copy">Optional social links can be enabled from the shared site config when they are ready.</p>
+              <div class="social-links" data-social-links></div>
+            </div>
+          </div>
+        </section-shell>
+
+        <section-shell
+          eyebrow="Support"
+          heading="GenPromptly questions and billing"
+          intro="The same contact address can be used for product questions, Stripe-related issues, or general support."
+        >
+          <div class="surface-card">
+            <p class="surface-copy">
+              If you are trying to access GenPromptly, need help with billing, or want to ask a product question, email <a data-contact-link href="#"></a>.
+            </p>
+          </div>
+        </section-shell>
+      </div>
+    </main>
+
+    <site-footer></site-footer>
+  </body>
+</html>

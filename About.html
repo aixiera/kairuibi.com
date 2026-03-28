@@ -3,67 +3,112 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About | OpsForLocal</title>
-    <meta name="description" content="About OpsForLocal and founder Kairui Bi." />
-    <link rel="shortcut icon" type="image/png" href="images/OpsForLocal_logo.png" />
+    <title>About | Kairui Bi</title>
+    <meta
+      name="description"
+      content="About Kairui Bi and the practical AI tools featured on this site."
+    />
     <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="module" src="/assets/js/site-components.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="/index.html">OpsForLocal</a>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a class="nav-link" href="/index.html">Home</a>
-          <a class="nav-link" href="/services.html">Services</a>
-          <a class="nav-link" href="/use-cases.html">Use Cases</a>
-          <a class="nav-link is-active" href="/About.html">About</a>
-          <a class="btn btn-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CeNNC3GzpD33tTMyYRw_LAGK5Lvc_WFGBK7fO8aqDFZvpboS6-yCJK3KkmPtZEr_Gzm-5OunI?gv=true" target="_blank" rel="noopener noreferrer">Book a Call</a>
-        </nav>
-      </div>
-    </header>
+    <site-navbar current="about"></site-navbar>
 
-    <main>
-      <div class="container">
-        <section class="page-card page-hero">
-          <h1>About OpsForLocal</h1>
-          <p>Founder-led AI automation services for practical business workflows.</p>
-        </section>
-
-        <section class="section about-copy">
-          <p>OpsForLocal is an AI automation business operated by Kairui Bi.</p>
-          <p>We focus on practical automation systems for real business workflows.</p>
-          <p>Our approach is simple:</p>
-          <p>understand the workflow,</p>
-          <p>identify repetitive steps,</p>
-          <p>and build a system that is actually usable for the business.</p>
-        </section>
-
-        <section class="cta-card">
-          <h2>Interested in discussing your workflow?</h2>
-          <p>Book a call to review your operations and decide whether a custom automation setup is a fit.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CeNNC3GzpD33tTMyYRw_LAGK5Lvc_WFGBK7fO8aqDFZvpboS6-yCJK3KkmPtZEr_Gzm-5OunI?gv=true" target="_blank" rel="noopener noreferrer">Book a Call</a>
-            <a class="btn btn-secondary" href="/services.html">View Services</a>
+    <main class="page-main">
+      <div class="container page-stack">
+        <hero-section
+          eyebrow="About"
+          title="Kairui Bi"
+          subtitle="Practical AI tools, built close to the workflow."
+          description="I am interested in products that help people move from rough ideas to usable output with less friction. That means keeping the software focused, understandable, and useful in ordinary work."
+          primary-label="View GenPromptly"
+          primary-href="/genpromptly.html"
+          secondary-label="Contact"
+          secondary-href="/contact.html"
+          image="/images/about_selfie.jpg"
+          image-alt="Portrait of Kairui Bi"
+          note="Builder and operator"
+        >
+          <div class="mini-card">
+            <span class="card-label">Current product</span>
+            <p>GenPromptly is the clearest example of the kind of software I want to build: narrow in scope, product-focused, and easy to scan.</p>
           </div>
-        </section>
+        </hero-section>
+
+        <section-shell
+          eyebrow="Profile"
+          heading="A personal site, not a company site."
+          intro="This website is meant to be direct. It presents the work as it is, with Kairui Bi clearly shown as the creator and operator."
+        >
+          <div class="section-grid two-up">
+            <div class="surface-card">
+              <h3>What I build</h3>
+              <p class="surface-copy">
+                I build practical AI tools and workflow-driven software. The goal is not to add unnecessary layers. It is to make a product that solves one job clearly and feels stable enough to use repeatedly.
+              </p>
+            </div>
+            <div class="surface-card">
+              <h3>What matters most</h3>
+              <ul class="feature-list">
+                <li>Clear product boundaries.</li>
+                <li>Interfaces that are easy to scan.</li>
+                <li>Copy that sounds like a real builder, not an ad.</li>
+              </ul>
+            </div>
+          </div>
+        </section-shell>
+
+        <section-shell
+          eyebrow="Principles"
+          heading="A few product rules I try to follow."
+          intro="These are simple, but they help keep the work grounded."
+        >
+          <div class="project-grid">
+            <project-card
+              eyebrow="01"
+              heading="Usefulness first"
+              description="A product should make one task easier in a way users can feel quickly."
+              status="Working rule"
+            ></project-card>
+            <project-card
+              eyebrow="02"
+              heading="Clarity over volume"
+              description="Good structure, short explanations, and clean interfaces matter more than extra layers."
+              status="Working rule"
+            ></project-card>
+            <project-card
+              eyebrow="03"
+              heading="Low-hype communication"
+              description="The product should speak for itself through the quality of the experience."
+              status="Working rule"
+            ></project-card>
+          </div>
+        </section-shell>
+
+        <section-shell
+          eyebrow="Now"
+          heading="The main product right now is GenPromptly."
+          intro="If you want the clearest view of what I am building, start there."
+        >
+          <div class="surface-grid two-up">
+            <div class="surface-card">
+              <h3>Why it matters</h3>
+              <p class="surface-copy">
+                Many people already have the rough idea of what they want to ask an AI system. The hard part is turning that rough draft into something clearer, more structured, and more reusable.
+              </p>
+            </div>
+            <div class="surface-card">
+              <h3>Next step</h3>
+              <div class="button-row">
+                <a class="btn btn-primary" href="/genpromptly.html">Open GenPromptly</a>
+                <a class="btn" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </div>
+        </section-shell>
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p class="footer-brand">OpsForLocal</p>
-        <p class="footer-meta">Operated by Kairui Bi in British Columbia, Canada</p>
-        <p class="footer-meta">Contact: <a href="mailto:opsforlocal@gmail.com">opsforlocal@gmail.com</a></p>
-        <nav class="footer-links" aria-label="Legal links">
-          <a href="/legal/privacy.html">Privacy Policy</a>
-          <a href="/legal/terms.html">Terms of Service</a>
-          <a href="/legal/refund.html">Refund / Cancellation Policy</a>
-        </nav>
-        <p class="footer-compliance">
-          <span>By subscribing, you agree to our Terms of Service, Privacy Policy, and Refund / Cancellation Policy.</span>
-          <span>Subscriptions renew automatically until canceled. All fees are non-refundable except where required by applicable law.</span>
-        </p>
-      </div>
-    </footer>
+    <site-footer></site-footer>
   </body>
 </html>

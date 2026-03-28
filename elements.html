@@ -4,18 +4,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="refresh" content="0; url=/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Redirecting | OpsForLocal</title>
+    <title>Page moved | Kairui Bi</title>
+    <meta name="description" content="This page has moved to the homepage." />
     <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="module" src="/assets/js/site-components.js"></script>
   </head>
   <body>
-    <main>
+    <site-navbar current="home"></site-navbar>
+    <main class="page-main">
       <div class="container">
-        <section class="page-card redirect-card">
-          <h1>Redirecting to Home</h1>
-          <p>This page has been retired.</p>
-          <a class="btn btn-secondary" href="/index.html">Open Home</a>
+        <section class="redirect-card">
+          <span class="eyebrow">Redirect</span>
+          <h1>This page has been retired.</h1>
+          <p>You can continue to <a class="back-link" href="/index.html">Home</a>.</p>
         </section>
       </div>
     </main>
+    <site-footer></site-footer>
   </body>
 </html>

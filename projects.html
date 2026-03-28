@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects | Kairui Bi</title>
+    <meta
+      name="description"
+      content="Current projects from Kairui Bi, with GenPromptly featured first."
+    />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="module" src="/assets/js/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar current="projects"></site-navbar>
+
+    <main class="page-main">
+      <div class="container page-stack">
+        <hero-section
+          eyebrow="Projects"
+          title="Current projects"
+          subtitle="A simple overview of what is active now."
+          description="This page is intentionally compact. GenPromptly is the main product, with room left for a few more projects later."
+          primary-label="View GenPromptly"
+          primary-href="/genpromptly.html"
+          secondary-label="Contact"
+          secondary-href="/contact.html"
+        >
+          <div class="mini-card">
+            <span class="card-label">Current state</span>
+            <p>The layout is ready to grow without forcing placeholder claims or invented project history.</p>
+          </div>
+        </hero-section>
+
+        <section-shell
+          eyebrow="Featured"
+          heading="GenPromptly comes first."
+          intro="It is the clearest representation of the product direction on this site."
+        >
+          <div class="project-grid">
+            <project-card
+              eyebrow="Main product"
+              heading="GenPromptly"
+              description="A prompt-refinement product that helps users turn rough inputs into clearer, more structured prompts."
+              status="Featured"
+              href="/genpromptly.html"
+              cta="Open product"
+              featured="true"
+            ></project-card>
+            <project-card
+              eyebrow="Reserved"
+              heading="Future project slot"
+              description="Reserved for another workflow-driven software tool when it is ready to publish."
+              status="Open"
+            ></project-card>
+            <project-card
+              eyebrow="Reserved"
+              heading="Future project slot"
+              description="Reserved for a second project, experiment, or smaller utility."
+              status="Open"
+            ></project-card>
+          </div>
+        </section-shell>
+
+        <section-shell
+          eyebrow="Notes"
+          heading="Why the page stays this minimal."
+          intro="A shorter project list is more credible than a padded one."
+        >
+          <div class="surface-grid two-up">
+            <div class="surface-card">
+              <h3>What is shown</h3>
+              <p class="surface-copy">
+                Only current work that is ready to present clearly should appear here. That keeps the page useful and easy to scan.
+              </p>
+            </div>
+            <div class="surface-card">
+              <h3>What comes later</h3>
+              <p class="surface-copy">
+                Additional cards can be filled in as new tools, experiments, or product releases become ready to share.
+              </p>
+            </div>
+          </div>
+        </section-shell>
+      </div>
+    </main>
+
+    <site-footer></site-footer>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GenPromptly | Kairui Bi</title>
+    <meta
+      name="description"
+      content="GenPromptly helps turn rough prompts into clearer, more structured prompts."
+    />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="module" src="/assets/js/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar current="genpromptly"></site-navbar>
+
+    <main class="page-main">
+      <div class="container page-stack">
+        <hero-section
+          eyebrow="Featured product"
+          title="GenPromptly"
+          subtitle="Turn rough prompts into clearer, more structured prompts."
+          description="GenPromptly is built to help users move from vague prompt drafts to clearer instructions that are easier to review, reuse, and adapt."
+          primary-label="Try GenPromptly"
+          primary-href="#product-access"
+          secondary-label="Contact"
+          secondary-href="/contact.html"
+        >
+          <div class="hero-stack">
+            <div class="mini-card">
+              <span class="card-label">What it does</span>
+              <p>It takes rough or messy prompts and helps shape them into something more specific and usable.</p>
+            </div>
+            <div class="mini-card">
+              <span class="card-label">What it avoids</span>
+              <p>It stays focused on prompt clarity rather than turning the product into a general-purpose marketing page.</p>
+            </div>
+          </div>
+        </hero-section>
+
+        <section-shell
+          eyebrow="Overview"
+          heading="A practical product for prompt refinement."
+          intro="The main job is simple: help users improve prompts without adding unnecessary friction."
+        >
+          <div class="surface-grid two-up">
+            <div class="surface-card">
+              <h3>Core idea</h3>
+              <p class="surface-copy">
+                GenPromptly helps users improve vague or messy prompts by making them more specific, structured, and easier to use. It is designed for people who already have a rough idea and want a cleaner starting point.
+              </p>
+            </div>
+            <div class="surface-card">
+              <h3>Where it helps</h3>
+              <ul class="feature-list">
+                <li>Turning short drafts into stronger prompt instructions.</li>
+                <li>Adding structure that makes outputs easier to compare.</li>
+                <li>Making prompts easier to reuse across repeated tasks.</li>
+              </ul>
+            </div>
+          </div>
+        </section-shell>
+
+        <section-shell
+          eyebrow="Before and after"
+          heading="A simple example."
+          intro="The product is meant to make the prompt clearer, not louder."
+        >
+          <div class="example-grid">
+            <div class="example-block">
+              <span class="example-label">Before</span>
+              <p>help me write a prompt for product feedback and make it organized</p>
+            </div>
+            <div class="example-block">
+              <span class="example-label">After</span>
+              <p>
+                Write a prompt that asks users for product feedback in three parts: what worked, what felt unclear, and what they would improve first. Keep the tone neutral and ask for short, concrete examples.
+              </p>
+            </div>
+          </div>
+        </section-shell>
+
+        <section-shell
+          eyebrow="How it works"
+          heading="A compact, product-focused flow."
+          intro="The intent is to keep the experience easy to scan and easy to return to."
+        >
+          <div class="project-grid">
+            <project-card
+              eyebrow="Step 1"
+              heading="Start rough"
+              description="Begin with the prompt as it exists now, even if it is short, unclear, or unstructured."
+              status="Input"
+            ></project-card>
+            <project-card
+              eyebrow="Step 2"
+              heading="Add structure"
+              description="Clarify the objective, constraints, and tone so the prompt becomes easier to use."
+              status="Refine"
+            ></project-card>
+            <project-card
+              eyebrow="Step 3"
+              heading="Review and reuse"
+              description="Use the revised prompt directly or keep iterating until it matches the workflow."
+              status="Output"
+            ></project-card>
+          </div>
+        </section-shell>
+
+        <section-shell
+          eyebrow="Access and billing"
+          heading="Prepared for Stripe without pretending the flow is finished."
+          intro="The CTA area below is intentionally wired to configuration values so Stripe Payment Links can be added first, then replaced later by Stripe Checkout or a Customer Portal route."
+        >
+          <div class="surface-grid two-up" id="product-access">
+            <div class="surface-card">
+              <h3>Product access</h3>
+              <p class="surface-copy">
+                Use the buttons below when the live app URL and billing links are ready. Until then, the placeholders stay visible without sending users through an incomplete flow.
+              </p>
+              <div data-product-actions="full"></div>
+            </div>
+            <div class="surface-card">
+              <h3>Integration note</h3>
+              <p class="surface-copy">
+                This structure is ready for a straightforward rollout:
+              </p>
+              <ul class="feature-list">
+                <li>Stripe Payment Link for the initial subscription button.</li>
+                <li>A dedicated billing route or Stripe Customer Portal for billing management.</li>
+                <li>The same page markup can later point to a custom Checkout session endpoint.</li>
+              </ul>
+            </div>
+          </div>
+        </section-shell>
+      </div>
+    </main>
+
+    <site-footer></site-footer>
+  </body>
+</html>

@@ -3,164 +3,157 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OpsForLocal | AI Automation for Local Service Businesses</title>
+    <title>Kairui Bi | Practical AI Tools</title>
     <meta
       name="description"
-      content="OpsForLocal provides practical AI automation services for local service businesses, including lead qualification, support workflows, sales prep, and internal workflow automation."
+      content="Personal website for Kairui Bi, featuring GenPromptly and other practical AI tools."
     />
-    <link rel="shortcut icon" type="image/png" href="images/OpsForLocal_logo.png" />
     <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="module" src="/assets/js/site-components.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="/index.html">OpsForLocal</a>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a class="nav-link is-active" href="/index.html">Home</a>
-          <a class="nav-link" href="/services.html">Services</a>
-          <a class="nav-link" href="/use-cases.html">Use Cases</a>
-          <a class="nav-link" href="/About.html">About</a>
-          <a
-            class="btn btn-primary"
-            href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CeNNC3GzpD33tTMyYRw_LAGK5Lvc_WFGBK7fO8aqDFZvpboS6-yCJK3KkmPtZEr_Gzm-5OunI?gv=true"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book a Call
-          </a>
-        </nav>
-      </div>
-    </header>
+    <site-navbar current="home"></site-navbar>
 
-    <main>
-      <div class="container">
-        <section class="hero" id="home">
-          <h1>OpsForLocal</h1>
-          <p class="subheadline">AI automation for local service businesses.</p>
-          <p>
-            We help businesses reduce repetitive admin work, respond to leads faster, and build practical AI workflows
-            that save time.
-          </p>
-          <div class="actions">
-            <a
-              class="btn btn-primary"
-              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CeNNC3GzpD33tTMyYRw_LAGK5Lvc_WFGBK7fO8aqDFZvpboS6-yCJK3KkmPtZEr_Gzm-5OunI?gv=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Book a Call
-            </a>
-            <a class="btn btn-secondary" href="/use-cases.html">See Use Cases</a>
+    <main class="page-main">
+      <div class="container page-stack">
+        <hero-section
+          eyebrow="Founder-led product site"
+          title="Kairui Bi"
+          subtitle="Building practical AI tools for real use cases."
+          description="I build practical AI tools and workflow-driven software with a focus on clarity, utility, and interfaces that are easy to return to."
+          primary-label="Try GenPromptly"
+          primary-href="/genpromptly.html"
+          secondary-label="Contact"
+          secondary-href="/contact.html"
+          image="/images/about_selfie.jpg"
+          image-alt="Portrait of Kairui Bi"
+          note="Founder, operator, and creator"
+        >
+          <div class="hero-stack">
+            <div class="mini-card">
+              <span class="card-label">Current focus</span>
+              <p>GenPromptly is the main product featured here, with a simple path to product details, trial access, and billing setup.</p>
+            </div>
+            <div class="mini-card">
+              <span class="card-label">Approach</span>
+              <p>Useful software should feel calm, specific, and honest about what it does.</p>
+            </div>
           </div>
-          <div class="supporting-text">
-            <p>Built and operated by OpsForLocal in British Columbia.</p>
-            <p>Services are customized to each business's workflow and tools.</p>
-            <p>Results vary by business, setup quality, and operational fit.</p>
-          </div>
-          <p class="risk-note">Please do not submit confidential, highly sensitive, or legally protected information unless necessary and authorized.</p>
-        </section>
+        </hero-section>
 
-        <section class="section" id="services">
-          <h2>What we help with</h2>
-          <div class="grid cols-4">
-            <article class="card">
-              <h3>Lead qualification</h3>
-              <p>
-                Automatically sort, route, and organize incoming leads so your team spends less time on manual triage.
+        <section-shell
+          eyebrow="About"
+          heading="A builder focused on useful software."
+          intro="I build practical AI tools and workflow-driven software with a strong preference for clarity over noise."
+        >
+          <div class="section-grid two-up">
+            <div class="surface-card">
+              <h3>Personal direction</h3>
+              <p class="surface-copy">
+                This site is intentionally simple. It is here to show what I am building, how GenPromptly works, and how to get in touch without a layer of agency language around it.
               </p>
-            </article>
-            <article class="card">
-              <h3>Customer support workflows</h3>
-              <p>
-                Handle common questions faster through website chat, intake flows, and internal automation.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Sales research and prep</h3>
-              <p>
-                Generate structured pre-call summaries and prospect research to reduce preparation time.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Internal workflow automation</h3>
-              <p>
-                Connect forms, messages, notes, and follow-up tasks so repetitive work happens in the background.
-              </p>
-            </article>
+            </div>
+            <div class="surface-card">
+              <h3>Working style</h3>
+              <ul class="feature-list">
+                <li>Workflow first, not demo first.</li>
+                <li>Clean copy and clear product boundaries.</li>
+                <li>Simple paths to try, subscribe, or ask a question.</li>
+              </ul>
+            </div>
           </div>
-        </section>
+        </section-shell>
 
-        <section class="section" id="use-cases">
-          <h2>Example use cases</h2>
-          <div class="grid cols-3">
-            <article class="card">
-              <h3>Lead qualification workflow</h3>
-              <p>
-                For businesses that receive many inquiries and need faster filtering, routing, and follow-up.
+        <section-shell
+          eyebrow="Featured product"
+          heading="GenPromptly"
+          intro="Turn rough prompts into clearer, more structured prompts."
+        >
+          <div class="section-grid two-up">
+            <div class="surface-card">
+              <p class="surface-copy">
+                GenPromptly helps users improve vague or messy prompts by making them more specific, structured, and easier to use.
               </p>
-            </article>
-            <article class="card">
-              <h3>Customer support and intake assistant</h3>
-              <p>
-                For businesses that want faster first responses and better intake consistency.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Sales prep co-pilot</h3>
-              <p>
-                For teams that want quicker company research, prospect notes, and pre-call summaries.
-              </p>
-            </article>
+              <ul class="feature-list">
+                <li>Starts from rough input instead of forcing a blank page.</li>
+                <li>Adds structure that makes prompts easier to review and reuse.</li>
+                <li>Keeps the product focused on clarity rather than noise.</li>
+              </ul>
+              <div class="button-row">
+                <a class="btn btn-primary" href="/genpromptly.html">Try GenPromptly</a>
+                <a class="btn" href="/genpromptly.html#product-access">Subscribe</a>
+              </div>
+            </div>
+            <div class="example-grid">
+              <div class="example-block">
+                <span class="example-label">Before</span>
+                <p>write a prompt for a sales email for my app and make it better</p>
+              </div>
+              <div class="example-block">
+                <span class="example-label">After</span>
+                <p>
+                  Write a concise outreach email for a software product. Keep the tone credible, mention one practical benefit, and end with a low-pressure call to reply for details.
+                </p>
+              </div>
+            </div>
           </div>
-          <p class="small-note">
-            Examples are illustrative and depend on each business's workflow, tools, and implementation.
-          </p>
-        </section>
+        </section-shell>
 
-        <section class="section" id="about">
-          <h2>About OpsForLocal</h2>
-          <div class="about-copy">
-            <p>OpsForLocal is an AI automation business operated by Kairui Bi.</p>
-            <p>We focus on practical automation systems for real business workflows.</p>
-            <p>Our approach is simple: understand the workflow, identify repetitive steps, and build a system that is actually usable for the business.</p>
+        <section-shell
+          eyebrow="Projects"
+          heading="A compact view of current work."
+          intro="GenPromptly is the main product right now, with room for a few more projects as they become ready to share."
+        >
+          <div class="project-grid">
+            <project-card
+              eyebrow="Featured"
+              heading="GenPromptly"
+              description="A focused prompt-refinement product for turning rough ideas into clearer instructions."
+              status="Live focus"
+              href="/genpromptly.html"
+              cta="View product"
+              featured="true"
+            ></project-card>
+            <project-card
+              eyebrow="Reserved"
+              heading="Next workflow tool"
+              description="Space for a future software product built around a specific workflow problem."
+              status="Open slot"
+            ></project-card>
+            <project-card
+              eyebrow="Reserved"
+              heading="Smaller experiment"
+              description="Room for a smaller release, prototype, or utility when it is ready to show."
+              status="Open slot"
+            ></project-card>
           </div>
-        </section>
+        </section-shell>
 
-        <section class="cta-card">
-          <h2>Interested in seeing whether AI automation fits your workflow?</h2>
-          <p>
-            Book a call to discuss your business, current bottlenecks, and whether a custom automation setup makes
-            sense.
-          </p>
-          <div class="actions">
-            <a
-              class="btn btn-primary"
-              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CeNNC3GzpD33tTMyYRw_LAGK5Lvc_WFGBK7fO8aqDFZvpboS6-yCJK3KkmPtZEr_Gzm-5OunI?gv=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Book a Call
-            </a>
+        <section-shell
+          eyebrow="Contact"
+          heading="A direct way to reach me."
+          intro="For product questions, subscription support, or a straightforward conversation about GenPromptly."
+        >
+          <div class="contact-grid">
+            <div class="surface-card">
+              <div class="contact-item">
+                <strong>Email</strong>
+                <a data-contact-link href="#"></a>
+              </div>
+              <p class="support-note">This is the main contact point for general questions and GenPromptly billing support.</p>
+            </div>
+            <div class="surface-card">
+              <div class="contact-item">
+                <strong>Location</strong>
+                <span data-location></span>
+              </div>
+              <p class="support-note">Social links can be added later in <span class="inline-path">assets/js/site-config.js</span> if needed.</p>
+            </div>
           </div>
-        </section>
+        </section-shell>
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p class="footer-brand">OpsForLocal</p>
-        <p class="footer-meta">Operated by Kairui Bi in British Columbia, Canada</p>
-        <p class="footer-meta">Contact: <a href="mailto:opsforlocal@gmail.com">opsforlocal@gmail.com</a></p>
-        <nav class="footer-links" aria-label="Legal links">
-          <a href="/legal/privacy.html">Privacy Policy</a>
-          <a href="/legal/terms.html">Terms of Service</a>
-          <a href="/legal/refund.html">Refund / Cancellation Policy</a>
-        </nav>
-        <p class="footer-compliance">
-          <span>By subscribing, you agree to our Terms of Service, Privacy Policy, and Refund / Cancellation Policy.</span>
-          <span>Subscriptions renew automatically until canceled. All fees are non-refundable except where required by applicable law.</span>
-        </p>
-      </div>
-    </footer>
+    <site-footer></site-footer>
   </body>
 </html>
