@@ -3,186 +3,325 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kairui Bi | Practical AI Tools</title>
+    <title>Kairui Bi | AI Agent Demos and Automation Portfolio</title>
     <meta
       name="description"
-      content="Personal website for Kairui Bi, featuring GenPromptly and other practical AI tools."
+      content="Kairui Bi is a job-seeking engineer showcasing AI-agent demos, automation workflows, and practical product interfaces."
     />
     <link rel="stylesheet" href="/assets/css/site.css" />
     <script type="module" src="/assets/js/site-components.js"></script>
   </head>
   <body>
-    <site-navbar current="home"></site-navbar>
+    <site-navbar current="intro"></site-navbar>
 
-    <main class="page-main">
+    <main class="page-main portfolio-main">
       <div class="container page-stack">
-        <hero-section
-          eyebrow="Founder-led product site"
-          title="Kairui Bi"
-          subtitle="Building practical AI tools for real use cases."
-          description="I build practical AI tools and workflow-driven software with a focus on clear product surfaces, useful output, and interfaces that feel steady enough to keep using."
-          primary-label="Try GenPromptly"
-          primary-href="/genpromptly.html"
-          secondary-label="Contact"
-          secondary-href="/contact.html"
-          image="/images/about_selfie.jpg"
-          image-alt="Portrait of Kairui Bi"
-          note="Founder, operator, and creator"
-        >
-          <div class="hero-proof">
-            <span class="signal-chip">Founder-led</span>
-            <span class="signal-chip">Product focused</span>
-            <span class="signal-chip is-soft">Stripe-ready layout</span>
+        <section class="hero-shell hero-portfolio reveal" id="intro" data-section>
+          <div class="hero-content">
+            <span class="eyebrow">Portfolio / Hiring</span>
+            <p class="hero-kicker">AI AGENT WORKFLOWS / AUTOMATION DEMOS / PRODUCT INTERFACES</p>
+            <h1 class="hero-title">I build practical AI systems that turn messy business steps into usable workflows.</h1>
+            <p class="hero-subtitle">
+              Job-seeking engineer with proof-of-work in lead qualification, sales copilots, appointment automation,
+              and workflow-focused product design.
+            </p>
+            <p class="hero-description" data-role-tagline></p>
+
+            <div class="hero-proof">
+              <span class="signal-chip">AI sales copilot</span>
+              <span class="signal-chip">Lead qualification</span>
+              <span class="signal-chip">Appointment automation</span>
+              <span class="signal-chip is-soft">Workflow builder</span>
+            </div>
+
+            <div class="hero-metrics">
+              <article class="metric-card">
+                <strong>05</strong>
+                <span>featured demos with real visuals and workflow context</span>
+              </article>
+              <article class="metric-card">
+                <strong>AI</strong>
+                <span>systems framed around routing, research, and usable output</span>
+              </article>
+              <article class="metric-card">
+                <strong>UX</strong>
+                <span>clear product surfaces designed to explain what the system is doing</span>
+              </article>
+            </div>
+
+            <div class="hero-command-panel">
+              <div class="command-header">
+                <span class="preview-title">Command menu</span>
+                <span class="pill">Live portfolio</span>
+              </div>
+              <div class="command-grid">
+                <a class="command-link is-primary" href="#demos">
+                  <span class="command-index">01</span>
+                  <span>View demos</span>
+                </a>
+                <span data-resume-button></span>
+                <span data-linkedin-button data-variant="btn-primary"></span>
+                <a class="command-link" href="#contact">
+                  <span class="command-index">04</span>
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+
+            <p class="hero-scroll-note">Scroll for demo evidence, workflow thinking, and hiring fit.</p>
           </div>
 
-          <div class="hero-stack">
-            <div class="app-preview">
-              <div class="preview-toolbar">
-                <div class="window-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+          <div class="hero-side">
+            <div class="visual-stage">
+              <article class="stage-primary">
+                <img src="/images/sale_summary_agent_new.png" alt="AI sales copilot visual" />
+                <div class="stage-caption">
+                  <span class="detail-label">Featured visual</span>
+                  <strong>Pre-call intelligence system</strong>
+                  <p>Research context transformed into a briefing a human can use before the conversation starts.</p>
                 </div>
-                <span class="preview-title">GenPromptly preview</span>
-                <span class="pill">Prompt refine</span>
-              </div>
-              <div class="prompt-grid">
-                <div class="prompt-panel">
-                  <span class="prompt-kicker">Before</span>
-                  <p>Need a product feedback prompt and make it more organized.</p>
-                </div>
-                <div class="prompt-panel is-accent">
-                  <span class="prompt-kicker">After</span>
-                  <p>Write a short product-feedback prompt with sections for what worked, what felt unclear, and what should improve first.</p>
-                </div>
-              </div>
-              <div class="token-row">
-                <span class="token">Specific</span>
-                <span class="token">Structured</span>
-                <span class="token is-soft">Reusable</span>
+              </article>
+
+              <div class="stage-stack">
+                <article class="stage-mini">
+                  <img src="/images/qualification_agent_new.png" alt="AI lead qualification visual" />
+                  <div class="stage-mini-copy">
+                    <span class="detail-label">Routing</span>
+                    <p>Qualification logic with clear branch outcomes.</p>
+                  </div>
+                </article>
+
+                <figure class="founder-panel founder-panel-hero">
+                  <img src="/images/about_selfie.jpg" alt="Portrait of Kairui Bi" />
+                  <figcaption>
+                    <strong>Kairui Bi</strong>
+                    <p class="surface-copy">Engineer focused on AI agents, workflow automation, and practical interfaces.</p>
+                  </figcaption>
+                </figure>
+
+                <article class="stage-mini">
+                  <img src="/images/(n8n tutorial) less2MB appointment record automation cover.jpg" alt="Appointment automation visual" />
+                  <div class="stage-mini-copy">
+                    <span class="detail-label">Operations</span>
+                    <p>Automation flows that reduce repetitive back-office work.</p>
+                  </div>
+                </article>
               </div>
             </div>
 
-            <div class="stat-grid">
-              <div class="stat-card">
-                <span class="card-label">Current focus</span>
-                <strong>GenPromptly</strong>
-                <p>A focused prompt-refinement product with a direct path to trial and billing.</p>
+            <div class="signal-board">
+              <div class="panel-toolbar">
+                <span class="preview-title">Current signal</span>
+                <span class="pill">Hiring ready</span>
               </div>
-              <div class="stat-card">
-                <span class="card-label">Working style</span>
-                <strong>Useful by default</strong>
-                <p>Products should read quickly and feel easy to return to.</p>
+              <div class="signal-list">
+                <div class="signal-item">
+                  <span class="detail-label">Positioning</span>
+                  <p>Job-seeking engineer with real demo evidence instead of placeholder portfolio copy.</p>
+                </div>
+                <div class="signal-item">
+                  <span class="detail-label">Strength</span>
+                  <p>Turning AI-agent concepts into understandable flows, visuals, and user-facing outcomes.</p>
+                </div>
+                <div class="signal-item">
+                  <span class="detail-label">Status</span>
+                  <p data-hiring-status></p>
+                </div>
               </div>
             </div>
           </div>
-        </hero-section>
+        </section>
 
-        <section-shell
-          eyebrow="About"
-          heading="A builder focused on useful software."
-          intro="The site is intentionally simple, but the interface should still feel shaped and professional."
-        >
-          <div class="feature-tiles three-up">
-            <div class="feature-tile">
-              <span class="icon-badge">01</span>
-              <h3>Workflow first</h3>
-              <p>Software should fit the job it is meant to help with, not force the user through extra ceremony.</p>
-            </div>
-            <div class="feature-tile">
-              <span class="icon-badge">02</span>
-              <h3>Clean product surface</h3>
-              <p>Shorter copy, clearer hierarchy, and calmer spacing make the site feel more credible.</p>
-            </div>
-            <div class="feature-tile">
-              <span class="icon-badge">03</span>
-              <h3>Low-hype presentation</h3>
-              <p>The goal is to make the product feel trustworthy without turning the page into marketing theater.</p>
-            </div>
+        <section class="section-shell reveal" id="demos" data-section>
+          <div class="section-header">
+            <span class="eyebrow">Demo credibility</span>
+            <h2 class="section-heading">Real workflows, not portfolio filler.</h2>
+            <p class="section-intro">
+              These demos show how I think through qualification logic, research pipelines, onboarding flows, and
+              practical operations automation.
+            </p>
           </div>
-        </section-shell>
+          <div class="section-callout">
+            <span class="detail-label">How to read this section</span>
+            <p>Each card frames the workflow as problem, system flow, stack, and outcome so the value is easy to scan fast.</p>
+          </div>
+          <div class="demo-grid" data-demo-grid></div>
+        </section>
 
-        <section-shell
-          eyebrow="Featured product"
-          heading="GenPromptly"
-          intro="Turn rough prompts into clearer, more structured prompts."
-        >
-          <div class="section-grid two-up">
-            <div class="surface-card">
-              <h3>What the product is for</h3>
-              <p class="surface-copy">
-                GenPromptly helps users improve vague or messy prompts by making them more specific, structured, and easier to use.
+        <section class="section-shell reveal" id="thinking" data-section>
+          <div class="section-header">
+            <span class="eyebrow">AI agent thinking</span>
+            <h2 class="section-heading">I treat agents like workflow systems, not magic tricks.</h2>
+            <p class="section-intro">
+              The goal is not to automate everything. The goal is to route the right work, keep the output usable, and
+              leave the human with better context.
+            </p>
+          </div>
+          <div class="thinking-layout">
+            <article class="thinking-stage reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">Design rule</span>
+                <span class="pill">System first</span>
+              </div>
+              <h3>I optimize for workflows that are legible, scoped, and worth trusting.</h3>
+              <p>
+                The strongest AI work on this page is not about pretending the system can do everything. It is about
+                defining the task boundary, making the handoffs obvious, and producing outputs that help the next human
+                decision happen faster.
               </p>
+              <div class="thinking-points">
+                <span class="signal-chip">Explain the route</span>
+                <span class="signal-chip">Respect confidence limits</span>
+                <span class="signal-chip is-soft">Keep human context visible</span>
+              </div>
+            </article>
+
+            <div class="angle-grid">
+              <article class="thinking-card reveal">
+              <span class="icon-badge">01</span>
+              <h3>Qualification logic matters</h3>
+              <p>
+                A useful agent needs thresholds, branch rules, and fallback paths. If the system cannot explain why a
+                lead is routed or rejected, it is not ready to help a business process.
+              </p>
+              </article>
+              <article class="thinking-card reveal">
+              <span class="icon-badge">02</span>
+              <h3>Research should become context</h3>
+              <p>
+                Retrieval is only valuable when it compresses into the next decision. I focus on turning scattered
+                sources into briefings, pre-call notes, and outputs a human can actually use.
+              </p>
+              </article>
+              <article class="thinking-card reveal">
+              <span class="icon-badge">03</span>
+              <h3>Human-in-the-loop stays visible</h3>
+              <p>
+                Not every step should be automated. Review points, approval moments, and confidence boundaries make the
+                system safer and easier to trust.
+              </p>
+              </article>
+              <article class="thinking-card reveal">
+              <span class="icon-badge">04</span>
+              <h3>Privacy and process come early</h3>
+              <p>
+                Workflow design has to account for what data is touched, where outputs go, and what should remain
+                internal before the automation ever looks impressive.
+              </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-shell reveal" id="about" data-section>
+          <div class="section-header">
+            <span class="eyebrow">About / resume</span>
+            <h2 class="section-heading">I am strongest where product thinking and engineering discipline overlap.</h2>
+            <p class="section-intro">
+              I like systems that have a clear job, a visible workflow, and an output someone can use immediately.
+            </p>
+          </div>
+
+          <div class="profile-stage reveal">
+            <div class="profile-copy">
+              <span class="detail-label">Profile readout</span>
+              <h3>I work best in teams that want useful AI features, strong workflow clarity, and interfaces people can trust.</h3>
+              <p>
+                My portfolio leans toward business-facing systems because that is where product decisions, workflow
+                design, and implementation quality all show up at the same time. I like taking fuzzy automation ideas
+                and turning them into a surface that feels understandable and ready to use.
+              </p>
+              <div class="profile-flags">
+                <span class="demo-chip">Workflow reasoning</span>
+                <span class="demo-chip">Product communication</span>
+                <span class="demo-chip">AI-assisted operations</span>
+              </div>
+            </div>
+            <div class="profile-readout">
+              <div class="readout-item">
+                <span class="detail-label">Best fit</span>
+                <p>AI product engineering, automation tooling, workflow systems, and user-facing interface work.</p>
+              </div>
+              <div class="readout-item">
+                <span class="detail-label">Working style</span>
+                <p>Turn ambiguity into structure, keep the user surface clean, and make the output easy to review.</p>
+              </div>
+              <div class="readout-item">
+                <span class="detail-label">Current mode</span>
+                <p data-hiring-status></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-grid">
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">What I build</span>
+                <span class="pill">Focus areas</span>
+              </div>
               <ul class="feature-list">
-                <li>Starts from rough input instead of forcing a blank page.</li>
-                <li>Adds structure that makes prompts easier to review and reuse.</li>
-                <li>Keeps the experience focused on clarity rather than clutter.</li>
+                <li>AI-agent workflows for qualification, research, and operational follow-through.</li>
+                <li>Automation systems that connect messaging, records, scheduling, and business context.</li>
+                <li>Interfaces that explain the workflow clearly instead of hiding it behind vague AI language.</li>
               </ul>
-              <div class="button-row">
-                <a class="btn btn-primary" href="/genpromptly.html">Try GenPromptly</a>
-                <a class="btn" href="/genpromptly.html#product-access">Subscribe</a>
-              </div>
-            </div>
+            </article>
 
-            <div class="comparison-surface">
+            <article class="resume-panel reveal">
               <div class="panel-toolbar">
-                <span class="preview-title">Before / after</span>
-                <span class="pill">Real prompt shape</span>
+                <span class="preview-title">What I use</span>
+                <span class="pill">Working stack</span>
               </div>
-              <div class="example-grid">
-                <div class="example-block">
-                  <span class="example-label">Before</span>
-                  <p>write a prompt for a sales email for my app and make it better</p>
-                </div>
-                <div class="example-block">
-                  <span class="example-label">After</span>
-                  <p>Write a concise outreach email for a software product. Keep the tone credible, mention one practical benefit, and end with a low-pressure call to reply for details.</p>
-                </div>
+              <ul class="feature-list">
+                <li>JavaScript, static web architecture, UI systems, and structured product pages.</li>
+                <li>LLM prompting, workflow orchestration, retrieval-style research, and automation tooling.</li>
+                <li>n8n-style operational flows, email-based routing, and business-process framing.</li>
+              </ul>
+            </article>
+
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">What I care about</span>
+                <span class="pill">Engineering habits</span>
               </div>
-            </div>
-          </div>
-        </section-shell>
+              <ul class="feature-list">
+                <li>Clear task boundaries, readable outputs, and systems that earn trust quickly.</li>
+                <li>Reducing friction in real workflows instead of building impressive but fragile demos.</li>
+                <li>Making the user-facing surface calm even when the underlying workflow is complex.</li>
+              </ul>
+            </article>
 
-        <section-shell
-          eyebrow="Projects"
-          heading="A compact view of current work."
-          intro="GenPromptly is the main product right now, with room for a few more projects when they are ready to show."
-        >
-          <div class="project-grid">
-            <project-card
-              eyebrow="Featured"
-              heading="GenPromptly"
-              description="A focused prompt-refinement product for turning rough ideas into clearer instructions."
-              status="Live focus"
-              href="/genpromptly.html"
-              cta="View product"
-              featured="true"
-            ></project-card>
-            <project-card
-              eyebrow="Reserved"
-              heading="Next workflow tool"
-              description="Space for a future software product built around a specific workflow problem."
-              status="Open slot"
-            ></project-card>
-            <project-card
-              eyebrow="Reserved"
-              heading="Smaller experiment"
-              description="Room for a smaller release, prototype, or utility when it is ready to show."
-              status="Open slot"
-            ></project-card>
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">What I am looking for</span>
+                <span class="pill">Hiring fit</span>
+              </div>
+              <p class="surface-copy">
+                Roles where I can help build practical AI products, workflow automation systems, or user-facing tools
+                that turn ambiguous requirements into clear functionality.
+              </p>
+              <div class="button-row compact-row">
+                <span data-linkedin-button></span>
+                <span data-resume-button></span>
+              </div>
+            </article>
           </div>
-        </section-shell>
+        </section>
 
-        <section-shell
-          eyebrow="Contact"
-          heading="A direct way to reach me."
-          intro="For product questions, subscription support, or a straightforward conversation about GenPromptly."
-        >
+        <section class="section-shell reveal" id="contact" data-section>
+          <div class="section-header">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-heading">A direct path for recruiters, hiring teams, and collaborators.</h2>
+            <p class="section-intro">
+              If the work here matches what your team needs, email is the fastest route and LinkedIn is the easiest
+              public profile reference.
+            </p>
+          </div>
+
           <div class="contact-grid">
-            <div class="contact-panel">
+            <div class="contact-panel reveal">
               <div class="panel-toolbar">
-                <span class="preview-title">Direct contact</span>
-                <span class="pill">Simple path</span>
+                <span class="preview-title">Primary contact</span>
+                <span class="pill">Open line</span>
               </div>
               <div class="contact-list">
                 <div class="contact-item">
@@ -193,25 +332,33 @@
                   <strong>Location</strong>
                   <span data-location></span>
                 </div>
+                <div class="contact-item">
+                  <strong>Status</strong>
+                  <span data-hiring-status></span>
+                </div>
               </div>
               <div class="contact-actions">
-                <a class="btn btn-primary" href="/contact.html">Open Contact</a>
-                <a class="btn" href="/genpromptly.html">View GenPromptly</a>
+                <a class="btn btn-primary" data-contact-button href="#">Email Kairui</a>
+                <span data-linkedin-button></span>
               </div>
             </div>
 
             <div class="support-topics">
-              <div class="topic-item">
-                <h3>Product questions</h3>
-                <p>Ask about product direction, current work, or what GenPromptly is meant to solve.</p>
-              </div>
-              <div class="topic-item">
-                <h3>Billing support</h3>
-                <p>Use the same contact point for subscription questions while Stripe links are being wired in.</p>
-              </div>
+              <article class="topic-item reveal">
+                <h3>Hiring conversations</h3>
+                <p>Best for recruiter outreach, engineering roles, and teams evaluating practical AI product fit.</p>
+              </article>
+              <article class="topic-item reveal">
+                <h3>Demo walkthroughs</h3>
+                <p>Useful when you want more detail on how the qualification, pre-call, or automation flows work.</p>
+              </article>
+              <article class="topic-item reveal">
+                <h3>Collaboration</h3>
+                <p>Also open to straightforward conversations about AI-agent workflows, automation systems, and interface work.</p>
+              </article>
             </div>
           </div>
-        </section-shell>
+        </section>
       </div>
     </main>
 
