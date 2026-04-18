@@ -1,4 +1,20 @@
-import { siteConfig } from "./site-config.js";
+const siteConfig = window.siteConfig;
+
+if (!siteConfig) {
+  throw new Error("siteConfig must be loaded before site-components.js");
+}
+
+function getSitePrefix() {
+  const pathname = decodeURIComponent(window.location.pathname).replaceAll("\\", "/");
+  const segments = pathname.split("/").filter(Boolean);
+  const rootIndex = segments.findIndex((segment) => segment.toLowerCase() === "kairuibi.com");
+  const siteSegments = rootIndex >= 0 ? segments.slice(rootIndex + 1) : segments;
+  const directoryDepth = Math.max(siteSegments.length - 1, 0);
+
+  return directoryDepth ? "../".repeat(directoryDepth) : "";
+}
+
+const sitePrefix = getSitePrefix();
 
 function escapeHtml(value = "") {
   return value
@@ -8,12 +24,25 @@ function escapeHtml(value = "") {
     .replaceAll('"', "&quot;");
 }
 
+function resolveSitePath(path = "") {
+  if (!path) {
+    return "";
+  }
+
+  if (/^(?:[a-z]+:|#|\/\/)/i.test(path)) {
+    return path;
+  }
+
+  return `${sitePrefix}${path}`;
+}
+
 function buildButton({ label, href, variant = "", disabledMessage = "", external = false }) {
   const className = ["btn", variant].filter(Boolean).join(" ");
 
   if (href) {
     const externalAttrs = external ? ' target="_blank" rel="noopener noreferrer"' : "";
-    return `<a class="${className}" href="${escapeHtml(href)}"${externalAttrs}>${escapeHtml(label)}</a>`;
+    const resolvedHref = external ? href : resolveSitePath(href);
+    return `<a class="${className}" href="${escapeHtml(resolvedHref)}"${externalAttrs}>${escapeHtml(label)}</a>`;
   }
 
   return `<span class="${className} is-disabled" role="link" aria-disabled="true" title="${escapeHtml(
@@ -40,7 +69,7 @@ function renderNav(current = "") {
   const links = siteConfig.portfolioNav
     .map((item) => {
       const activeClass = item.key === current ? " is-active" : "";
-      return `<a class="nav-link${activeClass}" href="${escapeHtml(item.href)}" data-section-link="${escapeHtml(
+      return `<a class="nav-link${activeClass}" href="${escapeHtml(resolveSitePath(item.href))}" data-section-link="${escapeHtml(
         item.key
       )}">${escapeHtml(item.label)}</a>`;
     })
@@ -49,7 +78,7 @@ function renderNav(current = "") {
   return `
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand-link" href="${siteConfig.routes.home}">
+        <a class="brand-link" href="${resolveSitePath(siteConfig.routes.home)}">
           <span class="brand-mark">KB</span>
           <span class="brand-copy">
             <span class="brand-name">${siteConfig.ownerName}</span>
@@ -88,6 +117,7 @@ function renderFooter() {
             <div>
               <p class="footer-brand">${siteConfig.ownerName}</p>
               <p class="footer-small">${escapeHtml(siteConfig.roleTagline)}</p>
+              <p class="footer-small">All demos and products on this site are developed by Kairui Bi.</p>
               <p class="footer-small">${escapeHtml(siteConfig.hiringStatus)}</p>
             </div>
             <div>
@@ -98,10 +128,11 @@ function renderFooter() {
             <div>
               <p class="footer-brand">Links</p>
               <div class="footer-links">
-                <a href="${siteConfig.routes.home}#demos">Demos</a>
+                <a href="${resolveSitePath(`${siteConfig.routes.home}#demos`)}">Demos</a>
+                <a href="${resolveSitePath(`${siteConfig.routes.home}#xulan`)}">XuLan</a>
                 <a href="${escapeHtml(siteConfig.linkedInUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="${siteConfig.routes.genpromptly}">GenPromptly</a>
-                <a href="${siteConfig.routes.privacy}">Privacy</a>
+                <a href="${resolveSitePath(siteConfig.routes.genpromptly)}">GenPromptly</a>
+                <a href="${resolveSitePath(siteConfig.routes.privacy)}">Privacy</a>
               </div>
             </div>
           </div>
@@ -198,7 +229,7 @@ function renderDemoCards() {
       (demo, index) => `
         <article class="demo-card reveal${index === 0 ? " is-featured" : ""}" style="--reveal-delay:${index * 120}ms">
           <div class="demo-frame">
-            <img src="${escapeHtml(demo.image)}" alt="${escapeHtml(demo.imageAlt)}" />
+            <img src="${escapeHtml(resolveSitePath(demo.image))}" alt="${escapeHtml(demo.imageAlt)}" />
             <div class="demo-visual-meta">
               <span class="demo-visual-label">System ${String(index + 1).padStart(2, "0")}</span>
               <span class="demo-visual-status">${escapeHtml(demo.status || demo.title)}</span>

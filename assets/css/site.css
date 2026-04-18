@@ -68,7 +68,7 @@ body::before {
 body::after {
   background:
     radial-gradient(circle at center, rgba(126, 198, 255, 0.08), transparent 42%),
-    url("/images/bg.jpg") center top / cover no-repeat;
+    url("../../images/bg.jpg") center top / cover no-repeat;
   mix-blend-mode: screen;
   opacity: 0.1;
 }
@@ -381,7 +381,7 @@ textarea {
 
 .hero-shell {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.78fr);
+  grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
   gap: 1.35rem;
   background:
     linear-gradient(180deg, rgba(126, 198, 255, 0.12), transparent 25%),
@@ -419,9 +419,9 @@ textarea {
 
 .hero-title {
   margin: 0;
-  max-width: 14ch;
-  font-size: clamp(2.6rem, 7vw, 5.4rem);
-  line-height: 0.94;
+  max-width: 11ch;
+  font-size: clamp(2.1rem, 5.6vw, 4.35rem);
+  line-height: 0.96;
   letter-spacing: -0.06em;
   text-transform: uppercase;
 }
@@ -430,7 +430,7 @@ textarea {
   margin: 1rem 0 0.8rem;
   max-width: 38rem;
   color: var(--muted-strong);
-  font-size: clamp(1rem, 2.3vw, 1.35rem);
+  font-size: clamp(0.96rem, 1.7vw, 1.14rem);
   font-weight: 700;
 }
 
@@ -455,11 +455,13 @@ textarea {
 .signal-list,
 .demo-grid,
 .angle-grid,
+.xulan-layout,
 .resume-grid,
 .support-topics,
 .contact-grid,
 .contact-list,
 .demo-list,
+.tutorial-stack,
 .footer-grid,
 .feature-list {
   display: grid;
@@ -635,13 +637,15 @@ textarea {
 .stage-mini-copy p {
   margin: 0;
   color: var(--muted-strong);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .stage-stack {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(140px, 0.82fr) minmax(0, 1fr);
   gap: 0.9rem;
+  align-items: stretch;
 }
 
 .stage-mini img {
@@ -649,7 +653,24 @@ textarea {
 }
 
 .stage-mini-copy {
-  padding: 0.82rem 0.88rem 0.95rem;
+  padding: 0.72rem 0.76rem 0.84rem;
+}
+
+.founder-panel-hero img {
+  aspect-ratio: 4 / 4;
+}
+
+.founder-panel-hero figcaption {
+  padding: 0.72rem 0.78rem 0.86rem;
+}
+
+.founder-panel-hero strong {
+  font-size: 0.92rem;
+}
+
+.founder-panel-hero .surface-copy {
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 .command-link {
@@ -888,6 +909,208 @@ textarea {
   gap: 1rem;
 }
 
+.xulan-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.xulan-card {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.78fr) minmax(0, 1.22fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.xulan-portrait {
+  overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  border: 1px solid rgba(126, 198, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.xulan-portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5.2;
+  object-fit: cover;
+}
+
+.xulan-copy {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.xulan-copy h3 {
+  margin: 0;
+  font-size: clamp(1.08rem, 1.8vw, 1.4rem);
+  letter-spacing: -0.03em;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.channel-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.channel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.7rem;
+  padding: 0.62rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted-strong);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 8px 50%);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.channel-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--line-strong);
+}
+
+.channel-link.is-youtube {
+  background: linear-gradient(135deg, rgba(255, 102, 102, 0.18), rgba(255, 255, 255, 0.04));
+}
+
+.channel-link.is-bilibili {
+  background: linear-gradient(135deg, rgba(126, 198, 255, 0.18), rgba(255, 255, 255, 0.04));
+}
+
+.channel-link.is-feishu {
+  background: linear-gradient(135deg, rgba(85, 177, 255, 0.2), rgba(255, 255, 255, 0.04));
+}
+
+.channel-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #04101d;
+  background: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 900;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 6px 50%);
+}
+
+.channel-link.is-youtube .channel-icon {
+  color: #ffffff;
+  background: #ff5c62;
+}
+
+.channel-link.is-feishu .channel-icon {
+  color: #ffffff;
+  background: #2388ff;
+}
+
+.channel-icon svg {
+  width: 0.92rem;
+  height: 0.92rem;
+  fill: currentColor;
+}
+
+.tutorial-stack {
+  align-content: start;
+}
+
+.expand-card {
+  padding: 0;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+.expand-card:hover {
+  border-color: rgba(126, 198, 255, 0.24);
+}
+
+.expand-card[open] {
+  border-color: rgba(126, 198, 255, 0.28);
+  background: linear-gradient(135deg, rgba(126, 198, 255, 0.1), rgba(255, 255, 255, 0.04));
+}
+
+.expand-summary {
+  position: relative;
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.08rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.expand-summary::-webkit-details-marker {
+  display: none;
+}
+
+.expand-summary::after {
+  content: "+";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--accent-strong);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.expand-card[open] .expand-summary::after {
+  content: "-";
+}
+
+.expand-label {
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.expand-title {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.expand-meta {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.expand-body {
+  padding: 0 1.08rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.resource-link {
+  display: inline-flex;
+  margin-top: 0.9rem;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resource-link:hover {
+  color: #ffffff;
+}
+
+.expand-body p {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+}
+
+.feature-list.is-tight {
+  margin-top: 0.85rem;
+  gap: 0.7rem;
+}
+
 .angle-grid,
 .resume-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1093,7 +1316,9 @@ textarea {
   .contact-grid,
   .footer-grid,
   .thinking-layout,
-  .profile-stage {
+  .profile-stage,
+  .xulan-layout,
+  .xulan-card {
     grid-template-columns: 1fr;
   }
 
@@ -1146,7 +1371,7 @@ textarea {
   }
 
   .hero-title {
-    font-size: clamp(2.3rem, 13vw, 3.4rem);
+    font-size: clamp(2rem, 12vw, 3rem);
   }
 
   .container {
