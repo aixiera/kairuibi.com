@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Publication | Kairui Bi</title>
+    <meta
+      name="description"
+      content="Research publication by Kairui Bi on facial expression recognition using MobileNetV2, VGG-16, ResNet, and Swin Transformer."
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script defer src="assets/js/site-config.js"></script>
+    <script defer src="assets/js/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar current="publication"></site-navbar>
+
+    <main class="page-main">
+      <div class="container page-stack">
+        <section class="hero-shell reveal" id="publication" data-section>
+          <div class="hero-content">
+            <span class="eyebrow">Publication / Research</span>
+            <p class="hero-kicker">Computer vision / FER2013 / CNN vs ViT / Proceedings of SPIE</p>
+            <h1 class="hero-title publication-title">A comparative study on facial expression recognition using MobileNetV2, VGG-16, ResNet and Swin Transformer</h1>
+            <p class="hero-subtitle">
+              Published in Proceedings of SPIE Volume 13545 with Kairui Bi, Jiapei Liao, Dongting Gao, Ruillin Yin, and
+              Yize Wang.
+            </p>
+            <p class="hero-description">
+              This paper compares CNN-based facial expression recognition models against a Swin Transformer on FER2013,
+              using pretrained models, augmentation, at least 20 training epochs, and evaluation across accuracy,
+              F1 score, precision, recall, loss curves, and confusion matrices.
+            </p>
+            <div class="hero-proof">
+              <span class="signal-chip">MobileNetV2</span>
+              <span class="signal-chip">VGG-16</span>
+              <span class="signal-chip">ResNet</span>
+              <span class="signal-chip">Swin Transformer</span>
+              <span class="signal-chip is-soft">FER2013</span>
+            </div>
+            <div class="button-row">
+              <a class="btn btn-primary" href="https://doi.org/10.1117/12.3060400" target="_blank" rel="noopener noreferrer">Read at SPIE</a>
+              <a class="btn" href="index.html#about">Back to portfolio</a>
+              <a class="btn btn-ghost" href="https://aixiera.github.io/phosphene-web/" target="_blank" rel="noopener noreferrer">Open phosphene demo</a>
+            </div>
+          </div>
+
+          <div class="hero-side">
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">Paper details</span>
+                <span class="pill">Proc. SPIE</span>
+              </div>
+              <ul class="feature-list">
+                <li>Published: 3 March 2025.</li>
+                <li>Proceedings Volume 13545, Third International Conference on Algorithms, Network, and Communication Technology (ICANCT 2024).</li>
+                <li>Conference context: Wuhan, China.</li>
+                <li>DOI: 10.1117/12.3060400.</li>
+              </ul>
+            </article>
+
+            <div class="signal-board reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">Research signal</span>
+                <span class="pill">Model comparison</span>
+              </div>
+              <div class="signal-list">
+                <div class="signal-item">
+                  <span class="detail-label">Dataset</span>
+                  <p>FER2013 with 48x48 images across 7 emotion classes, plus augmentation to improve training quality.</p>
+                </div>
+                <div class="signal-item">
+                  <span class="detail-label">Evaluation</span>
+                  <p>Accuracy, F1 score, precision, recall, loss visualization, and confusion matrix review.</p>
+                </div>
+                <div class="signal-item">
+                  <span class="detail-label">Why it fits here</span>
+                  <p>It connects research discipline with the rest of the portfolio's focus on practical AI systems and interfaces.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-shell reveal">
+          <div class="section-header">
+            <span class="eyebrow">Study at a glance</span>
+            <h2 class="section-heading">A comparison framed around architecture tradeoffs, not just a single accuracy number.</h2>
+            <p class="section-intro">
+              The study is built around one practical question: how do common CNN backbones and a transformer-based
+              model behave when they are trained and evaluated under the same facial expression recognition setup?
+            </p>
+          </div>
+
+          <div class="hero-metrics">
+            <article class="metric-card">
+              <strong>04</strong>
+              <span>model families compared across CNN and transformer approaches</span>
+            </article>
+            <article class="metric-card">
+              <strong>07</strong>
+              <span>emotion categories from the FER2013 benchmark dataset</span>
+            </article>
+            <article class="metric-card">
+              <strong>48x48</strong>
+              <span>input image size used for the facial expression classification task</span>
+            </article>
+            <article class="metric-card">
+              <strong>20+</strong>
+              <span>training epochs with pretrained backbones and evaluation visualizations</span>
+            </article>
+          </div>
+
+          <div class="angle-grid">
+            <article class="thinking-card reveal">
+              <span class="icon-badge">01</span>
+              <h3>Model choice matters</h3>
+              <p>The paper compares MobileNetV2, VGG-16, ResNet, and Swin Transformer under one shared evaluation setup.</p>
+            </article>
+            <article class="thinking-card reveal">
+              <span class="icon-badge">02</span>
+              <h3>Dataset handling matters</h3>
+              <p>FER2013 augmentation was used to improve the training signal before running the model comparison.</p>
+            </article>
+            <article class="thinking-card reveal">
+              <span class="icon-badge">03</span>
+              <h3>Metrics should stay broad</h3>
+              <p>The evaluation is framed with accuracy, F1, precision, recall, and visualization instead of relying on one metric alone.</p>
+            </article>
+            <article class="thinking-card reveal">
+              <span class="icon-badge">04</span>
+              <h3>The portfolio link is practical</h3>
+              <p>This research complements the site's product and workflow demos by showing a stronger computer-vision foundation.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-shell reveal">
+          <div class="section-header">
+            <span class="eyebrow">Abstract</span>
+            <h2 class="section-heading">The paper studies the tradeoff between classical CNNs and a transformer-based approach.</h2>
+            <p class="section-intro">
+              Instead of assuming a newer model is automatically better, the work is set up as a structured comparison
+              between established CNN baselines and a Swin Transformer for facial emotion recognition.
+            </p>
+          </div>
+
+          <div class="resume-grid">
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">Summary</span>
+                <span class="pill">Paper overview</span>
+              </div>
+              <p class="surface-copy">
+                Facial expression recognition continues to matter across security, identification, and broader
+                computer-vision applications. This paper compares CNN-based architectures that are strong local-feature
+                extractors with a Swin Transformer approach that is often motivated by stronger global feature handling.
+              </p>
+              <p class="surface-copy">
+                Using FER2013, pretrained models, augmentation, and multi-metric evaluation, the study frames the
+                comparison around practical strengths and weaknesses rather than model hype.
+              </p>
+            </article>
+
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">Method</span>
+                <span class="pill">Evaluation setup</span>
+              </div>
+              <ul class="feature-list">
+                <li>Pretrained MobileNetV2, VGG-16, ResNet, and Swin Transformer models.</li>
+                <li>FER2013 benchmark with 48x48 facial images across 7 emotion classes.</li>
+                <li>At least 20 epochs of training with augmentation and visualization-based review.</li>
+                <li>Performance measured with accuracy, F1 score, precision, recall, loss, and confusion matrices.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-shell reveal">
+          <div class="section-header">
+            <span class="eyebrow">Related demo</span>
+            <h2 class="section-heading">A small live experiment that extends the site's vision and simulation work.</h2>
+            <p class="section-intro">
+              Beyond the paper, the portfolio also includes a browser-based Phosphene Vision Simulator built around the
+              Pulse2Percept library.
+            </p>
+          </div>
+
+          <div class="resume-grid">
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">Phosphene demo</span>
+                <span class="pill">Live experiment</span>
+              </div>
+              <h3>Kairui (Alex)'s Phosphene Vision Simulator</h3>
+              <p class="surface-copy">
+                This small web demo lets users upload a JPG or PNG and generate AlphaAMS, ArgusII, and PRIMA
+                simulations based on the Pulse2Percept library.
+              </p>
+              <ul class="feature-list">
+                <li>Designed as a lightweight browser demo for comparing prosthetic vision outputs.</li>
+                <li>Includes practical upload guidance: keep files under 50 KB and avoid sensitive images.</li>
+                <li>Shows a second side of the portfolio: scientific and assistive-tech oriented interaction design.</li>
+              </ul>
+              <div class="button-row compact-row">
+                <a class="btn btn-primary" href="https://aixiera.github.io/phosphene-web/" target="_blank" rel="noopener noreferrer">Open live demo</a>
+              </div>
+            </article>
+
+            <article class="resume-panel reveal">
+              <div class="panel-toolbar">
+                <span class="preview-title">Portfolio context</span>
+                <span class="pill">Why it belongs here</span>
+              </div>
+              <p class="surface-copy">
+                The publication and the phosphene simulator both show that the portfolio is not limited to workflow
+                automation. They also point toward research-informed computer vision work, interface clarity, and
+                practical demo building.
+              </p>
+              <div class="button-row compact-row">
+                <a class="btn" href="index.html#demos">Back to demo portfolio</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <site-footer></site-footer>
+  </body>
+</html>

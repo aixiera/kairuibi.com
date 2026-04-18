@@ -12,6 +12,7 @@ window.siteConfig = {
   routes: {
     home: "index.html",
     about: "About.html",
+    publications: "publications.html",
     genpromptly: "genpromptly.html",
     projects: "projects.html",
     contact: "contact.html",
@@ -22,6 +23,7 @@ window.siteConfig = {
   portfolioNav: [
     { key: "intro", label: "Intro", href: "index.html#intro" },
     { key: "demos", label: "Demos", href: "index.html#demos" },
+    { key: "publication", label: "Publication", href: "publications.html" },
     { key: "xulan", label: "XuLan", href: "index.html#xulan" },
     { key: "thinking", label: "AI Agent Thinking", href: "index.html#thinking" },
     { key: "about", label: "About / Resume", href: "index.html#about" },
@@ -35,17 +37,32 @@ window.siteConfig = {
   ],
   demos: [
     {
-      key: "qualification",
-      title: "AI lead qualification",
-      status: "Sales routing",
-      image: "images/qualification_agent_new.png",
-      imageAlt: "Lead qualification workflow showing qualified and disqualified routing.",
-      tags: ["Lead scoring", "Auto replies", "Branch logic"],
-      problem: "Inbound leads need fast triage without wasting human review on low-fit contacts.",
-      flow: "Capture inquiry, analyze fit signals, branch qualified leads, and send disqualification replies automatically.",
-      stack: "LLM workflow, routing logic, email automation, qualification prompts",
-      output: "A clearer sales pipeline with response speed and consistent qualification decisions.",
-      impact: "Shows judgment, branching logic, and practical business automation."
+      key: "ai-digest",
+      title: "n8n AI scratch daily digest",
+      status: "Multi-source AI signal",
+      visualType: "digest",
+      image: "images/ai-digest-workflow.jpg",
+      imageAlt: "n8n workflow that collects AI information from multiple sources and sends a daily email digest.",
+      images: [
+        {
+          src: "images/ai-digest-workflow.jpg",
+          alt: "Workflow view of the AI information digest automation."
+        },
+        {
+          src: "images/ai-digest-email-1.jpg",
+          alt: "Daily AI digest email with linked source highlights."
+        },
+        {
+          src: "images/ai-digest-email-2.jpg",
+          alt: "Another AI digest email showing curated video and news links."
+        }
+      ],
+      tags: ["n8n", "Daily email", "YouTube + podcasts"],
+      problem: "Useful AI signal is scattered across YouTube, podcasts, and other sources, so important updates are easy to miss.",
+      flow: "Collect multi-source inputs, filter and organize what matters, format a compact digest, and send the result by email every day.",
+      stack: "n8n, multi-source collection, ranking logic, LLM summarization, Gmail delivery",
+      output: "A daily AI scratch email that turns noisy sources into a readable set of links, takeaways, and thumbnails.",
+      impact: "Shows multi-source orchestration, useful signal curation, and automatic delivery instead of one-off automation."
     },
     {
       key: "sales-copilot",
@@ -64,7 +81,7 @@ window.siteConfig = {
       key: "asmr-generator",
       title: "n8n ASMR video generator",
       status: "Content automation",
-      image: "images/(n8n tutorial) less2MB appointment record automation cover.jpg",
+      image: "images/n8n-asmr-screenshot.jpg",
       imageAlt: "n8n workflow for automated ASMR video generation and publishing.",
       tags: ["n8n", "Video pipeline", "Auto publishing"],
       problem: "Short-form ASMR content is slow to produce when topic planning, asset generation, assembly, and posting all stay manual.",
@@ -87,21 +104,40 @@ window.siteConfig = {
       impact: "Shows that Kairui Bi builds the communication layer around AI workflows, not just the automation."
     },
     {
+      key: "phosphene-simulator",
+      title: "Phosphene vision simulator",
+      status: "Accessible vision demo",
+      visualType: "phosphene",
+      imageAlt: "Stylized visual for the Phosphene Vision Simulator.",
+      tags: ["Pulse2Percept", "Assistive tech", "Vision simulation"],
+      problem: "Retinal implant perception is difficult to explain clearly with text alone.",
+      flow: "Upload a small JPG or PNG, generate AlphaAMS, ArgusII, and PRIMA simulations, and compare the outputs in the browser.",
+      stack: "Pulse2Percept, browser UI, image upload handling, prosthetic vision simulation",
+      output: "A small live demo that makes prosthetic vision concepts easier to explore and communicate.",
+      impact: "Shows scientific-tool thinking, accessible interface design, and practical demo building beyond business workflows.",
+      actionLabel: "Open live demo",
+      actionUrl: "https://aixiera.github.io/phosphene-web/",
+      actionExternal: true
+    },
+    {
       key: "genpromptly",
       title: "GenPromptly",
       status: "Product experiment",
-      image: "images/customer_agent.png",
-      imageAlt: "GenPromptly support image.",
+      visualType: "genpromptly",
+      imageAlt: "GenPromptly web app preview.",
       tags: ["Prompt design", "Product UI", "Structured output"],
       problem: "Rough prompts often need a clearer structure before they are useful in practice.",
       flow: "Start with messy input, reshape it into a reusable prompt, and keep the interface focused.",
       stack: "Prompt design, product framing, structured output, clean interface work",
       output: "A lightweight prompt-refinement product with a narrow job to be done.",
-      impact: "Represents product-thinking and interface discipline within the portfolio."
+      impact: "Represents product-thinking and interface discipline within the portfolio.",
+      actionLabel: "Open GenPromptly.app",
+      actionUrl: "https://genpromptly.app/",
+      actionExternal: true
     }
   ],
   genPromptly: {
-    tryUrl: "",
+    tryUrl: "https://genpromptly.app/",
     subscribeUrl: "",
     manageBillingUrl: "",
     paymentMode: "payment-links-first",

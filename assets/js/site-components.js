@@ -129,10 +129,12 @@ function renderFooter() {
               <p class="footer-brand">Links</p>
               <div class="footer-links">
                 <a href="${resolveSitePath(`${siteConfig.routes.home}#demos`)}">Demos</a>
+                <a href="${resolveSitePath(siteConfig.routes.publications)}">Publication</a>
                 <a href="${resolveSitePath(`${siteConfig.routes.home}#xulan`)}">XuLan</a>
                 <a href="${escapeHtml(siteConfig.linkedInUrl)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="${resolveSitePath(siteConfig.routes.genpromptly)}">GenPromptly</a>
                 <a href="${resolveSitePath(siteConfig.routes.privacy)}">Privacy</a>
+                <a href="${resolveSitePath(siteConfig.routes.terms)}">Terms</a>
               </div>
             </div>
           </div>
@@ -160,29 +162,33 @@ function renderProductActions(mode = "full") {
     );
   }
 
-  actions.push(
-    buildButton({
-      label: "Subscribe with Stripe",
-      href: siteConfig.genPromptly.subscribeUrl,
-      disabledMessage: siteConfig.genPromptly.subscribePlaceholder
-    })
-  );
+  if (siteConfig.genPromptly.subscribeUrl) {
+    actions.push(
+      buildButton({
+        label: "Subscribe with Stripe",
+        href: siteConfig.genPromptly.subscribeUrl
+      })
+    );
+  }
 
-  actions.push(
-    buildButton({
-      label: "Manage Billing",
-      href: siteConfig.genPromptly.manageBillingUrl,
-      variant: "btn-ghost",
-      disabledMessage: siteConfig.genPromptly.billingPlaceholder
-    })
-  );
+  if (siteConfig.genPromptly.manageBillingUrl) {
+    actions.push(
+      buildButton({
+        label: "Manage Billing",
+        href: siteConfig.genPromptly.manageBillingUrl,
+        variant: "btn-ghost"
+      })
+    );
+  }
+
+  const note = siteConfig.genPromptly.subscribeUrl || siteConfig.genPromptly.manageBillingUrl
+    ? 'Live app and billing URLs are configured in <span class="inline-path">assets/js/site-config.js</span>.'
+    : 'The live app URL is configured in <span class="inline-path">assets/js/site-config.js</span>. Billing links can be added later.';
 
   return `
     <div class="cta-row">
       <div class="button-row">${actions.join("")}</div>
-      <p class="integration-note">
-        Billing URLs are configured in <span class="inline-path">assets/js/site-config.js</span>. The layout is ready for Stripe Payment Links first and can later point to Checkout or a customer portal.
-      </p>
+      <p class="integration-note">${note}</p>
     </div>
   `;
 }
@@ -223,13 +229,120 @@ class SiteFooter extends HTMLElement {
   }
 }
 
+function renderDemoVisual(demo) {
+  if (demo.visualType === "digest") {
+    const [workflow, emailOne, emailTwo] = demo.images || [];
+
+    return `
+      <div class="digest-visual">
+        <div class="digest-primary">
+          <img src="${escapeHtml(resolveSitePath(workflow?.src || demo.image))}" alt="${escapeHtml(
+            workflow?.alt || demo.imageAlt
+          )}" />
+        </div>
+        <div class="digest-secondary">
+          ${[emailOne, emailTwo]
+            .filter(Boolean)
+            .map(
+              (image, index) => `
+                <figure class="digest-email-card digest-email-${index + 1}">
+                  <img src="${escapeHtml(resolveSitePath(image.src))}" alt="${escapeHtml(image.alt || demo.imageAlt)}" />
+                </figure>
+              `
+            )
+            .join("")}
+        </div>
+        <p class="digest-note">Daily AI signal pulled from YouTube, podcasts, and other high-value sources, then sent as a compact email digest.</p>
+      </div>
+    `;
+  }
+
+  if (demo.visualType === "genpromptly") {
+    const skills = [
+      "Workflow Spec",
+      "Email Pack",
+      "Marketing Variants",
+      "Video Script",
+      "Image to Prompt",
+      "Compliance Review"
+    ];
+
+    return `
+      <div class="promptly-visual">
+        <div class="promptly-surface">
+          <div class="promptly-header">
+            <div>
+              <span class="promptly-brand">GenPromptly</span>
+              <p>Helps make prompts clearer, adds structure for common workflows, and supports review with audit-friendly records.</p>
+            </div>
+            <div class="promptly-actions">
+              <span class="promptly-btn is-primary">Start Free</span>
+              <span class="promptly-btn">View Pricing</span>
+              <span class="promptly-btn">Sign In</span>
+              <span class="promptly-btn">Create Prompt</span>
+            </div>
+          </div>
+          <div class="promptly-block">
+            <span class="promptly-label">Who It Is For</span>
+            <p>Prompt engineers, AI teams, growth teams, and operators who need repeatable prompt quality instead of ad hoc edits.</p>
+          </div>
+          <div class="promptly-skill-grid">
+            ${skills
+              .map(
+                (skill) => `
+                  <article class="promptly-skill-card">
+                    <strong>${escapeHtml(skill)}</strong>
+                    <p>Sharper structure for a practical prompt workflow.</p>
+                  </article>
+                `
+              )
+              .join("")}
+          </div>
+          <div class="promptly-footer">
+            <span class="promptly-plan">Free to try, with live access at GenPromptly.app.</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  if (demo.visualType === "phosphene") {
+    const devices = [
+      { label: "AlphaAMS", note: "coarse prosthetic field" },
+      { label: "ArgusII", note: "retinal implant output" },
+      { label: "PRIMA", note: "central vision simulation" }
+    ];
+
+    return `
+      <div class="phosphene-visual">
+        <div class="phosphene-grid">
+          ${devices
+            .map(
+              (device, index) => `
+                <article class="phosphene-device device-${index + 1}">
+                  <span class="detail-label">Mode ${String(index + 1).padStart(2, "0")}</span>
+                  <strong>${escapeHtml(device.label)}</strong>
+                  <p>${escapeHtml(device.note)}</p>
+                </article>
+              `
+            )
+            .join("")}
+        </div>
+        <p class="phosphene-note">Upload a JPG or PNG under 50 KB to compare simulated implant outputs.</p>
+      </div>
+    `;
+  }
+
+  return `<img src="${escapeHtml(resolveSitePath(demo.image))}" alt="${escapeHtml(demo.imageAlt)}" />`;
+}
+
 function renderDemoCards() {
   return siteConfig.demos
     .map(
       (demo, index) => `
         <article class="demo-card reveal${index === 0 ? " is-featured" : ""}" style="--reveal-delay:${index * 120}ms">
-          <div class="demo-frame">
-            <img src="${escapeHtml(resolveSitePath(demo.image))}" alt="${escapeHtml(demo.imageAlt)}" />
+          <div class="demo-frame${demo.visualType ? " is-generated" : ""}">
+            ${renderDemoVisual(demo)}
             <div class="demo-visual-meta">
               <span class="demo-visual-label">System ${String(index + 1).padStart(2, "0")}</span>
               <span class="demo-visual-status">${escapeHtml(demo.status || demo.title)}</span>
@@ -267,6 +380,16 @@ function renderDemoCards() {
                 <p>${escapeHtml(demo.output)}</p>
               </div>
             </div>
+            ${
+              demo.actionUrl
+                ? `<div class="button-row compact-row demo-actions">${buildButton({
+                    label: demo.actionLabel || "Open",
+                    href: demo.actionUrl,
+                    variant: "btn-primary",
+                    external: Boolean(demo.actionExternal)
+                  })}</div>`
+                : ""
+            }
           </div>
         </article>
       `
