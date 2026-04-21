@@ -1,11 +1,11 @@
 window.siteConfig = {
   ownerName: "Kairui Bi",
   roleLabel: "AI agent builder",
-  roleTagline: "IB student focused on AI agent implementation, data science, and practical workflow tools developed by Kairui Bi.",
+  roleTagline: "IB student focused on AI agents, data science, and practical workflow tools.",
   location: "BC, Canada",
   contactEmail: "bia446635@gmail.com",
   founderImage: "images/about_selfie.jpg",
-  hiringStatus: "Open to internships, engineering roles, and collaboration in AI agents, automation, and data science.",
+  hiringStatus: "Open to internships, engineering roles, and AI automation collaboration.",
   resumeUrl: "",
   resumePlaceholder: "Add your resume URL in assets/js/site-config.js.",
   linkedInUrl: "https://www.linkedin.com/in/kairui-bi-9913ab377/",
@@ -58,11 +58,11 @@ window.siteConfig = {
         }
       ],
       tags: ["n8n", "Daily email", "YouTube + podcasts"],
-      problem: "Useful AI signal is scattered across YouTube, podcasts, and other sources, so important updates are easy to miss.",
-      flow: "Collect multi-source inputs, filter and organize what matters, format a compact digest, and send the result by email every day.",
+      problem: "Useful AI signal is scattered across YouTube, podcasts, and other sources.",
+      flow: "Collect sources, rank what matters, format a digest, and email it daily.",
       stack: "n8n, multi-source collection, ranking logic, LLM summarization, Gmail delivery",
-      output: "A daily AI scratch email that turns noisy sources into a readable set of links, takeaways, and thumbnails.",
-      impact: "Shows multi-source orchestration, useful signal curation, and automatic delivery instead of one-off automation."
+      output: "A daily AI email with links, takeaways, and thumbnails.",
+      impact: "Shows multi-source curation and automatic delivery."
     },
     {
       key: "sales-copilot",
@@ -71,11 +71,11 @@ window.siteConfig = {
       image: "images/sale_summary_agent_new.png",
       imageAlt: "AI sales copilot that prepares a pre-call report from research inputs.",
       tags: ["Research", "Summaries", "Call prep"],
-      problem: "Sales conversations lose quality when reps start calls without context or research.",
-      flow: "Pull public context, summarize the prospect, and assemble a structured pre-call briefing.",
+      problem: "Sales calls suffer when reps lack context.",
+      flow: "Pull public context, summarize the prospect, and assemble a pre-call brief.",
       stack: "Web research, prompt structuring, report generation, workflow orchestration",
-      output: "A pre-call report with usable background, context, and talking points.",
-      impact: "Demonstrates retrieval, summarization, and professional output formatting."
+      output: "A pre-call report with background and talking points.",
+      impact: "Demonstrates retrieval, summarization, and polished reporting."
     },
     {
       key: "asmr-generator",
@@ -84,11 +84,11 @@ window.siteConfig = {
       image: "images/n8n-asmr-screenshot.jpg",
       imageAlt: "n8n workflow for automated ASMR video generation and publishing.",
       tags: ["n8n", "Video pipeline", "Auto publishing"],
-      problem: "Short-form ASMR content is slow to produce when topic planning, asset generation, assembly, and posting all stay manual.",
-      flow: "Choose a topic, build the plan, generate scenes and clips, assemble the final video, and distribute it through the publishing workflow.",
+      problem: "ASMR shorts are slow when planning, assets, assembly, and posting stay manual.",
+      flow: "Choose a topic, plan scenes, generate clips, assemble the video, and publish.",
       stack: "n8n, AI planning, image and clip generation, video assembly, Telegram, YouTube",
-      output: "A repeatable multi-step content system for generating and shipping ASMR videos with less manual work.",
-      impact: "Shows end-to-end workflow orchestration from idea selection to published output."
+      output: "A repeatable system for generating and shipping ASMR videos.",
+      impact: "Shows orchestration from idea to published output."
     },
     {
       key: "precall-briefing",
@@ -97,11 +97,11 @@ window.siteConfig = {
       image: "images/precall 1 cover.png",
       imageAlt: "Pre-call briefing visual with meeting preparation notes.",
       tags: ["Onboarding", "Expectation setting", "Workflow messaging"],
-      problem: "Calls go better when the other side arrives with the right context and expectations.",
-      flow: "Package key context before the meeting, explain the workflow clearly, and prepare the user for the conversation.",
+      problem: "Calls go better when both sides arrive prepared.",
+      flow: "Package context, explain the workflow, and prepare the user for the conversation.",
       stack: "AI-agent messaging, onboarding design, visual communication, workflow framing",
-      output: "A cleaner handoff into meetings with stronger context and less confusion.",
-      impact: "Shows that Kairui Bi builds the communication layer around AI workflows, not just the automation."
+      output: "A cleaner meeting handoff with less confusion.",
+      impact: "Shows communication design around AI workflows."
     },
     {
       key: "phosphene-simulator",
@@ -110,11 +110,11 @@ window.siteConfig = {
       visualType: "phosphene",
       imageAlt: "Stylized visual for the Phosphene Vision Simulator.",
       tags: ["Pulse2Percept", "Assistive tech", "Vision simulation"],
-      problem: "Retinal implant perception is difficult to explain clearly with text alone.",
-      flow: "Upload a small JPG or PNG, generate AlphaAMS, ArgusII, and PRIMA simulations, and compare the outputs in the browser.",
+      problem: "Retinal implant perception is hard to explain with text alone.",
+      flow: "Upload an image, generate AlphaAMS, ArgusII, and PRIMA simulations, and compare outputs.",
       stack: "Pulse2Percept, browser UI, image upload handling, prosthetic vision simulation",
-      output: "A small live demo that makes prosthetic vision concepts easier to explore and communicate.",
-      impact: "Shows scientific-tool thinking, accessible interface design, and practical demo building beyond business workflows.",
+      output: "A live demo for exploring prosthetic vision concepts.",
+      impact: "Shows scientific tooling and accessible interface design.",
       actionLabel: "Open live demo",
       actionUrl: "https://aixiera.github.io/phosphene-web/",
       actionExternal: true
@@ -126,11 +126,11 @@ window.siteConfig = {
       visualType: "genpromptly",
       imageAlt: "GenPromptly web app preview.",
       tags: ["Prompt design", "Product UI", "Structured output"],
-      problem: "Rough prompts often need a clearer structure before they are useful in practice.",
+      problem: "Rough prompts need structure before they are useful.",
       flow: "Start with messy input, reshape it into a reusable prompt, and keep the interface focused.",
       stack: "Prompt design, product framing, structured output, clean interface work",
-      output: "A lightweight prompt-refinement product with a narrow job to be done.",
-      impact: "Represents product-thinking and interface discipline within the portfolio.",
+      output: "A lightweight prompt-refinement product with one clear job.",
+      impact: "Shows product thinking and interface discipline.",
       actionLabel: "Open GenPromptly.app",
       actionUrl: "https://genpromptly.app/",
       actionExternal: true

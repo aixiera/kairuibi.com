@@ -117,7 +117,7 @@ function renderFooter() {
             <div>
               <p class="footer-brand">${siteConfig.ownerName}</p>
               <p class="footer-small">${escapeHtml(siteConfig.roleTagline)}</p>
-              <p class="footer-small">All demos and products on this site are developed by Kairui Bi.</p>
+              <p class="footer-small">Demos and products by Kairui Bi.</p>
               <p class="footer-small">${escapeHtml(siteConfig.hiringStatus)}</p>
             </div>
             <div>
@@ -182,8 +182,8 @@ function renderProductActions(mode = "full") {
   }
 
   const note = siteConfig.genPromptly.subscribeUrl || siteConfig.genPromptly.manageBillingUrl
-    ? 'Live app and billing URLs are configured in <span class="inline-path">assets/js/site-config.js</span>.'
-    : 'The live app URL is configured in <span class="inline-path">assets/js/site-config.js</span>. Billing links can be added later.';
+    ? 'Live app and billing URLs are in <span class="inline-path">assets/js/site-config.js</span>.'
+    : 'The live app URL is in <span class="inline-path">assets/js/site-config.js</span>. Billing links can be added later.';
 
   return `
     <div class="cta-row">
@@ -252,7 +252,7 @@ function renderDemoVisual(demo) {
             )
             .join("")}
         </div>
-        <p class="digest-note">Daily AI signal pulled from YouTube, podcasts, and other high-value sources, then sent as a compact email digest.</p>
+        <p class="digest-note">Daily AI signal from YouTube, podcasts, and other sources, sent as a compact email.</p>
       </div>
     `;
   }
@@ -273,7 +273,7 @@ function renderDemoVisual(demo) {
           <div class="promptly-header">
             <div>
               <span class="promptly-brand">GenPromptly</span>
-              <p>Helps make prompts clearer, adds structure for common workflows, and supports review with audit-friendly records.</p>
+              <p>Makes prompts clearer, structured, and easier to review.</p>
             </div>
             <div class="promptly-actions">
               <span class="promptly-btn is-primary">Start Free</span>
@@ -284,7 +284,7 @@ function renderDemoVisual(demo) {
           </div>
           <div class="promptly-block">
             <span class="promptly-label">Who It Is For</span>
-            <p>Prompt engineers, AI teams, growth teams, and operators who need repeatable prompt quality instead of ad hoc edits.</p>
+            <p>For teams that need repeatable prompt quality.</p>
           </div>
           <div class="promptly-skill-grid">
             ${skills

@@ -332,6 +332,7 @@ textarea {
 .redirect-card,
 .footer-panel,
 .contact-panel,
+.calendar-panel,
 .resume-panel,
 .thinking-card,
 .topic-item,
@@ -357,6 +358,7 @@ textarea {
 .redirect-card::before,
 .footer-panel::before,
 .contact-panel::before,
+.calendar-panel::before,
 .resume-panel::before,
 .thinking-card::before,
 .thinking-stage::before,
@@ -547,6 +549,7 @@ textarea {
 .profile-stage,
 .topic-item,
 .contact-panel,
+.calendar-panel,
 .redirect-card,
 .surface-card,
 .app-preview,
@@ -725,6 +728,7 @@ textarea {
 .thinking-card,
 .topic-item,
 .contact-panel,
+.calendar-panel,
 .surface-card,
 .app-preview,
 .comparison-surface {
@@ -1504,6 +1508,28 @@ textarea {
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 }
 
+.calendar-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.calendar-embed {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid rgba(126, 198, 255, 0.2);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.calendar-embed iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: clamp(420px, 58vw, 640px);
+}
+
 .support-topics {
   grid-template-columns: 1fr;
 }
@@ -1673,6 +1699,10 @@ textarea {
   .section-shell,
   .redirect-card {
     padding: 1rem;
+  }
+
+  .calendar-embed iframe {
+    height: 520px;
   }
 
   .section-callout {
