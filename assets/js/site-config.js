@@ -15,6 +15,7 @@ window.siteConfig = {
     publications: "publications.html",
     genpromptly: "genpromptly.html",
     projects: "projects.html",
+    booking: "booking.html",
     contact: "contact.html",
     privacy: "legal/privacy.html",
     terms: "legal/terms.html",
@@ -22,11 +23,12 @@ window.siteConfig = {
   },
   portfolioNav: [
     { key: "intro", label: "Intro", href: "index.html#intro" },
-    { key: "demos", label: "Demos", href: "index.html#demos" },
+    { key: "demos", label: "Demos", href: "index.html#intro" },
     { key: "publication", label: "Publication", href: "publications.html" },
     { key: "xulan", label: "XuLan", href: "index.html#xulan" },
     { key: "thinking", label: "AI Agent Thinking", href: "index.html#thinking" },
     { key: "about", label: "About / Resume", href: "index.html#about" },
+    { key: "booking", label: "Booking", href: "booking.html" },
     { key: "contact", label: "Contact", href: "index.html#contact" }
   ],
   socialLinks: [
